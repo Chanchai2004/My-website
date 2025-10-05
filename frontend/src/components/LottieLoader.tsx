@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import Lottie from 'lottie-react';
 
 interface LottieLoaderProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl';
+  size?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl';
   className?: string;
   animationData?: any;
   loop?: boolean;
@@ -12,7 +12,7 @@ interface LottieLoaderProps {
 }
 
 export function LottieLoader({ 
-  size = 'md', 
+  size = 'xl', 
   className = '', 
   animationData,
   loop = true,
@@ -54,7 +54,10 @@ export function LottieLoader({
     lg: 'w-32 h-32',
     xl: 'w-48 h-48',
     '2xl': 'w-64 h-64',
-    '3xl': 'w-80 h-80'
+    '3xl': 'w-80 h-80',
+    '4xl': 'w-96 h-96',
+    '5xl': 'w-[28rem] h-[28rem]',
+    '6xl': 'w-[32rem] h-[32rem]'
   };
 
   if (loading) {
@@ -113,15 +116,15 @@ export function FullScreenLoader({ className = '' }: { className?: string }) {
     <div className={`fixed inset-0 z-[60] flex items-center justify-center bg-[var(--background)]/98 backdrop-blur-md ${className}`}>
       <div className="text-center">
         <LottieLoader 
-          size="3xl" 
+          size="6xl" 
           className="mx-auto mb-8"
           loop={true}
           autoplay={true}
         />
-        <p className="text-[var(--foreground)] text-xl font-semibold mb-2">
+        <p className="text-[var(--foreground)] text-2xl font-semibold mb-2">
           Loading...
         </p>
-        <p className="text-[var(--muted-foreground)] text-sm">
+        <p className="text-[var(--muted-foreground)] text-base">
           Please wait while we prepare everything for you
         </p>
       </div>
@@ -134,12 +137,12 @@ export function PageLoader({ className = '' }: { className?: string }) {
     <div className={`fixed inset-0 z-[60] flex items-center justify-center bg-[var(--background)]/95 backdrop-blur-sm ${className}`}>
       <div className="text-center">
         <LottieLoader 
-          size="3xl" 
+          size="5xl" 
           className="mx-auto mb-6"
           loop={true}
           autoplay={true}
         />
-        <p className="text-[var(--muted-foreground)] text-lg font-medium">
+        <p className="text-[var(--muted-foreground)] text-xl font-medium">
           Loading...
         </p>
       </div>

@@ -66,3 +66,4 @@ npm run dev
 
 ### Frontend:
 - `NEXT_PUBLIC_API_URL` - จะถูกตั้งเป็น `http://localhost:8000` อัตโนมัติใน development mode
+
