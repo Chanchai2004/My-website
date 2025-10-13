@@ -8,6 +8,7 @@ interface ProjectCardProps {
   status: 'Completed' | 'In Progress' | 'Planning';
   image?: string;
   onClick?: () => void;
+  projectId?: string;
 }
 
 export default function ProjectCard({
@@ -16,7 +17,8 @@ export default function ProjectCard({
   tech,
   status,
   image,
-  onClick
+  onClick,
+  projectId
 }: ProjectCardProps) {
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -33,8 +35,9 @@ export default function ProjectCard({
 
   return (
     <div
-      className="bg-[var(--card)] border border-[var(--border)] rounded-xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group cursor-pointer"
+      className="bg-[var(--card)] border border-[var(--border)] rounded-xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group cursor-pointer relative overflow-hidden"
       onClick={onClick}
+      data-project-id={projectId}
     >
       {/* Project Image (if provided) */}
       {image && (
