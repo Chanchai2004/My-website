@@ -161,20 +161,145 @@
   --color-dark-button-text: var(--dark-button-text);
   --color-dark-button-hover: var(--dark-button-hover);
   --color-dark-button-focus: var(--dark-button-focus);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-lato: var(--font-lato);
+  --font-noto-sans-thai: var(--font-noto-sans-thai);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  font-family: var(--font-lato), var(--font-noto-sans-thai), system-ui, -apple-system, sans-serif;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Custom Tailwind Classes */
 .w-18 { width: 4.5rem; } /* 72px */
 .h-18 { height: 4.5rem; } /* 72px */
+
+/* Lato Font Classes */
+.lato-thin {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.lato-light {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.lato-regular {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lato-bold {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lato-black {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.lato-thin-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.lato-light-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.lato-regular-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.lato-bold-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.lato-black-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* Noto Sans Thai Font Classes */
+.noto-sans-thai-thin {
+  font-family: "Noto Sans Thai", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.noto-sans-thai-extralight {
+  font-family: "Noto Sans Thai", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.noto-sans-thai-light {
+  font-family: "Noto Sans Thai", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.noto-sans-thai-regular {
+  font-family: "Noto Sans Thai", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.noto-sans-thai-medium {
+  font-family: "Noto Sans Thai", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.noto-sans-thai-semibold {
+  font-family: "Noto Sans Thai", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.noto-sans-thai-bold {
+  font-family: "Noto Sans Thai", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.noto-sans-thai-extrabold {
+  font-family: "Noto Sans Thai", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.noto-sans-thai-black {
+  font-family: "Noto Sans Thai", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
 
 /* Responsive Design Utilities */
 @media (max-width: 640px) {
