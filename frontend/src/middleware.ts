@@ -14,17 +14,8 @@ export function middleware(request: NextRequest) {
     return NextResponse.next()
   }
 
-  // Get cookies
-  const isLogin = request.cookies.get('isLogin')?.value
-  const role = request.cookies.get('role')?.value
-
-  // If not logged in and trying to access protected routes
-  if (!isLogin && pathname !== '/login') {
-    return NextResponse.redirect(new URL('/login', request.url))
-  }
-
-  // If logged in and trying to access login page
-  if (isLogin && pathname === '/login') {
+  // Redirect all routes to Home page (except Home itself)
+  if (pathname !== '/') {
     return NextResponse.redirect(new URL('/', request.url))
   }
 
