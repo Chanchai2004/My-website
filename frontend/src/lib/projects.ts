@@ -143,14 +143,14 @@ export const projectCategories: ProjectCategory[] = [
         },
         fullDescription: {
           en: 'A complete facility management system designed and developed for the Northeast Science Park 2 in Nakhon Ratchasima province. This web-based application provides comprehensive management capabilities including meeting room booking, maintenance request submissions, invoice printing for rented spaces, and online service area requests. The system elevates resource management efficiency, reduces operational complexity, minimizes errors from previous systems, and enhances systematic data inspection, tracking, and storage capabilities.',
-          th: 'ระบบจัดการสิ่งอำนวยความสะดวกที่สมบูรณ์ซึ่งออกแบบและพัฒนาสำหรับอุทยานวิทยาศาสตร์ภาคตะวันออกเฉียงเหนือ 2 ในจังหวัดนครราชสีมา แอปพลิเคชันบนเว็บนี้ให้ความสามารถในการจัดการที่ครบวงจร รวมถึงการจองห้องประชุม, การส่งคำขอซ่อมบำรุง, การพิมพ์ใบแจ้งหนี้สำหรับพื้นที่เช่า และการร้องขอพื้นที่บริการออนไลน์ ระบบยกระดับประสิทธิภาพการจัดการทรัพยากร ลดความซับซ้อนในการดำเนินงาน ลดข้อผิดพลาดจากระบบก่อนหน้า และเพิ่มความสามารถในการตรวจสอบ ติดตาม และจัดเก็บข้อมูลอย่างเป็นระบบ'
+          th: 'ระบบจัดการสิ่งอำนวยความสะดวกที่ซึ่งออกแบบและพัฒนาสำหรับอุทยานวิทยาศาสตร์ภาคตะวันออกเฉียงเหนือ 2 ในจังหวัดนครราชสีมา แอปพลิเคชันบนเว็บนี้ให้ความสามารถในการจัดการที่ครบวงจร รวมถึงการจองห้องประชุม, การส่งคำขอซ่อมบำรุง, การพิมพ์ใบแจ้งหนี้สำหรับพื้นที่เช่า และการร้องขอพื้นที่บริการออนไลน์ ระบบยกระดับประสิทธิภาพการจัดการทรัพยากร ลดความซับซ้อนในการดำเนินงาน ลดข้อผิดพลาดจากระบบก่อนหน้า และเพิ่มความสามารถในการตรวจสอบ ติดตาม และจัดเก็บข้อมูลอย่างเป็นระบบ'
         },
         tech: ['React Native', 'TypeScript', 'JWT', 'Go', 'Material-UI', 'SMTP Email', 'CSV', 'PDF.js', 'OK Slip'],
         status: 'Completed',
         duration: '8 months',
         team: {
-          en: 'Solo Project',
-          th: 'โปรเจกต์เดี่ยว'
+          en: 'Capstone Project Group Project',
+          th: 'โปรเจกต์กลุ่ม'
         },
         images: [
           '/images/projects/rsp-northeast2-system/ant.png',
@@ -230,13 +230,13 @@ export const projectCategories: ProjectCategory[] = [
         ],
         challenges: {
           en: [
-            'Building payment processing system with no prior experience using Stripe service',
+            
             'Implementing complex role-based access control for doctors, nurses, and admin staff',
             'Creating separate interfaces and permissions for different user types',
             'Integrating email notification system for HR management'
           ],
           th: [
-            'สร้างระบบประมวลผลการชำระเงินโดยไม่มีประสบการณ์ก่อนหน้านี้ในการใช้บริการ Stripe',
+            
             'ใช้งานระบบควบคุมการเข้าถึงตามบทบาทที่ซับซ้อนสำหรับแพทย์, พยาบาล และเจ้าหน้าที่บริหาร',
             'สร้างอินเทอร์เฟซและสิทธิ์การเข้าถึงที่แยกกันสำหรับผู้ใช้แต่ละประเภท',
             'รวมระบบแจ้งเตือนทางอีเมลสำหรับการจัดการ HR'
@@ -244,13 +244,13 @@ export const projectCategories: ProjectCategory[] = [
         },
         solutions: {
           en: [
-            'Implemented Stripe payment service for secure transaction processing',
+            'Implemented OK Slip payment service for secure Check the slip processing',
             'Built comprehensive role-based middleware with JWT authentication',
             'Created separate dashboard interfaces for doctors, nurses, and administrative staff',
             'Integrated email service for HR notifications and system updates'
           ],
           th: [
-            'ใช้งานบริการชำระเงิน Stripe สำหรับการประมวลผลธุรกรรมที่ปลอดภัย',
+            'ใช้งานบริการชำระเงิน OK Slip สำหรับการประมวลผลตรวจสอบสลิปที่ปลอดภัย',
             'สร้าง Middleware ตามบทบาทที่ครอบคลุมพร้อมการยืนยันตัวตน JWT',
             'สร้างอินเทอร์เฟซแดชบอร์ดแยกกันสำหรับแพทย์, พยาบาล และเจ้าหน้าที่บริหาร',
             'รวมบริการอีเมลสำหรับการแจ้งเตือน HR และการอัปเดตระบบ'
@@ -258,16 +258,15 @@ export const projectCategories: ProjectCategory[] = [
         },
         results: {
           en: [
-            'Successfully implemented payment system with Stripe integration',
+            
             'Robust role-based access control ensuring data privacy and security',
             'Separate user interfaces for different hospital staff roles',
-            'Efficient HR management with automated email notifications'
+            'Efficient user management with automated email notifications'
           ],
           th: [
-            'ใช้งานระบบชำระเงินพร้อมการรวม Stripe สำเร็จ',
-            'ระบบควบคุมการเข้าถึงตามบทบาทที่แข็งแกร่งรับประกันความเป็นส่วนตัวและความปลอดภัยของข้อมูล',
+            'ระบบควบคุมการเข้าถึงตามบทบาทหน้าที่ความเป็นส่วนตัวและความปลอดภัยของข้อมูล',
             'อินเทอร์เฟซผู้ใช้แยกกันสำหรับบทบาทเจ้าหน้าที่โรงพยาบาลที่แตกต่างกัน',
-            'การจัดการ HR ที่มีประสิทธิภาพพร้อมการแจ้งเตือนทางอีเมลอัตโนมัติ'
+            'การจัดการผู้ใช้ที่มีประสิทธิภาพพร้อมการแจ้งเตือนทางอีเมลอัตโนมัติ'
           ]
         },
         links: {
@@ -286,7 +285,7 @@ export const projectCategories: ProjectCategory[] = [
         },
         fullDescription: {
           en: 'A complete movie theater management system developed as part of a System Analysis course group project. The system features showtime scheduling, movie management, theater mapping, and seat booking capabilities. I was responsible for developing the showtime management module and the booking system integration. The main challenge involved complex mapping between movies, theaters, and time slots, requiring careful database design and user interface development to display this information in an intuitive table format.',
-          th: 'ระบบจัดการโรงภาพยนตร์ที่สมบูรณ์ซึ่งพัฒนาขึ้นเป็นส่วนหนึ่งของโปรเจกต์กลุ่มวิชาการวิเคราะห์ระบบ ระบบมีฟีเจอร์การจัดตารางรอบฉาย, การจัดการภาพยนตร์, การแมปโรงภาพยนตร์ และความสามารถในการจองที่นั่ง ผมรับผิดชอบในการพัฒนาโมดูลจัดการรอบฉายและการรวมระบบจอง ความท้าทายหลักเกี่ยวข้องกับการแมปที่ซับซ้อนระหว่างภาพยนตร์, โรงภาพยนตร์ และช่วงเวลา ซึ่งต้องการการออกแบบฐานข้อมูลอย่างรอบคอบและการพัฒนาอินเทอร์เฟซผู้ใช้เพื่อแสดงข้อมูลนี้ในรูปแบบตารางที่ใช้งานง่าย'
+          th: 'ระบบจัดการโรงภาพยนตร์ซึ่งพัฒนาขึ้นเป็นส่วนหนึ่งของโปรเจกต์กลุ่มวิชาการวิเคราะห์ระบบ ระบบมีฟีเจอร์การจัดตารางรอบฉาย, การจัดการภาพยนตร์, การแมปโรงภาพยนตร์ และความสามารถในการจองที่นั่ง ผมรับผิดชอบในการพัฒนาส่วนจัดการรอบฉายและการรวมระบบจอง ความท้าทายหลักเกี่ยวข้องกับการจับคู่ที่ซับซ้อนระหว่างภาพยนตร์, โรงภาพยนตร์ และช่วงเวลา ซึ่งต้องการการออกแบบฐานข้อมูลอย่างรอบคอบและการพัฒนาอินเทอร์เฟซผู้ใช้เพื่อแสดงข้อมูลนี้ในรูปแบบตารางที่ใช้งานง่าย'
         },
         tech: ['React Native', 'Ant Design', 'Go', 'SQLite', 'System Analysis'],
         status: 'Completed',
@@ -311,7 +310,7 @@ export const projectCategories: ProjectCategory[] = [
             'Integrating booking system with showtime management'
           ],
           th: [
-            'ระบบการแมปที่ซับซ้อนระหว่างภาพยนตร์, โรงภาพยนตร์ และช่วงเวลา',
+            'ระบบการจับคู่ที่ซับซ้อนระหว่างภาพยนตร์, โรงภาพยนตร์ และช่วงเวลา',
             'สร้างการแสดงผลตารางที่ใช้งานง่ายสำหรับการจัดตารางรอบฉาย',
             'จัดการการจัดสรรภาพยนตร์ในหลายโรงและช่วงเวลา',
             'รวมระบบจองเข้ากับการจัดการรอบฉาย'
@@ -346,7 +345,208 @@ export const projectCategories: ProjectCategory[] = [
           ]
         },
         links: {
-          github: 'https://github.com/sut67/movie-theater-system'
+          github: 'https://github.com/Chanchai2004/Sum_code_Sa.git'
+        }
+      },
+      {
+        id: 'skai-phi-medical-system',
+        title: {
+          en: 'SKAI PHI - Medical Data Collection System',
+          th: 'SKAI PHI - ระบบรวบรวมข้อมูลทางการแพทย์'
+        },
+        description: {
+          en: 'Medical data collection and analysis system for stroke risk assessment with AI prediction integration.',
+          th: 'ระบบรวบรวมและวิเคราะห์ข้อมูลทางการแพทย์สำหรับการประเมินความเสี่ยงโรคหลอดเลือดสมองพร้อมการทำนายด้วย AI'
+        },
+        fullDescription: {
+          en: 'A confidential medical data collection system designed for stroke risk assessment. The system features patient registration, comprehensive data collection, and AI model integration for risk prediction. The application focuses on data security and privacy compliance, implementing robust authentication and encryption methods. Results are displayed through an intuitive web interface for medical professionals to analyze patient data efficiently.',
+          th: 'ระบบรวบรวมข้อมูลทางการแพทย์ที่เป็นความลับสำหรับการประเมินความเสี่ยงโรคหลอดเลือดสมอง ระบบมีฟีเจอร์การลงทะเบียนผู้ป่วย, การเก็บรวบรวมข้อมูลอย่างครอบคลุม และการผสานรวมโมเดล AI สำหรับการทำนายความเสี่ยง แอปพลิเคชันมุ่งเน้นที่ความปลอดภัยของข้อมูลและการปฏิบัติตามข้อกำหนดความเป็นส่วนตัว โดยใช้วิธีการยืนยันตัวตนและการเข้ารหัสที่แข็งแกร่ง ผลลัพธ์จะแสดงผ่านอินเทอร์เฟซเว็บที่ใช้งานง่ายสำหรับบุคลากรทางการแพทย์ในการวิเคราะห์ข้อมูลผู้ป่วยอย่างมีประสิทธิภาพ'
+        },
+        tech: ['Secret'],
+        status: 'In Progress',
+        duration: 'Ongoing',
+        team: {
+          en: 'Collaborative Medical Technology Project',
+          th: 'โปรเจกต์ความร่วมมือด้านเทคโนโลยีทางการแพทย์'
+        },
+        images: [
+          '/images/projects/skai-phi-medical-system/1.png',
+
+        ],
+        challenges: {
+          en: [
+            'Implementing robust security measures including hash functions and password salting',
+            'Ensuring PDPA compliance for sensitive medical data collection and storage',
+            'Designing secure data storage infrastructure for patient privacy protection'
+          ],
+          th: [
+            'การใช้มาตรการรักษาความปลอดภัยที่แข็งแกร่งรวมถึง hash functions และ password salting',
+            'การปฏิบัติตาม PDPA สำหรับการเก็บรวบรวมและจัดเก็บข้อมูลทางการแพทย์ที่ละเอียดอ่อน',
+            'การออกแบบโครงสร้างพื้นฐานการจัดเก็บข้อมูลที่ปลอดภัยเพื่อปกป้องความเป็นส่วนตัวของผู้ป่วย'
+          ]
+        },
+        solutions: {
+          en: [
+            'Developed secure web application with comprehensive data collection capabilities',
+            'Implemented multi-layer security architecture with encryption and access control',
+            'Created role-based system for medical professionals and data analysts',
+            'Integrated with AI prediction models for stroke risk assessment'
+          ],
+          th: [
+            'พัฒนาเว็บแอปพลิเคชันที่ปลอดภัยพร้อมความสามารถในการเก็บรวบรวมข้อมูลที่ครอบคลุม',
+            'ใช้สถาปัตยกรรมความปลอดภัยแบบหลายชั้นด้วยการเข้ารหัสและการควบคุมการเข้าถึง',
+            'สร้างระบบแบ่งบทบาทสำหรับบุคลากรทางการแพทย์และนักวิเคราะห์ข้อมูล',
+            'ผสานรวมกับโมเดลการทำนายด้วย AI สำหรับการประเมินความเสี่ยงโรคหลอดเลือดสมอง'
+          ]
+        },
+        results: {
+          en: [
+            'Facilitated efficient data collection process for medical professionals',
+            'Successfully met company requirements and project objectives',
+            'Enhanced data analysis capabilities with secure access controls'
+          ],
+          th: [
+            'อำนวยความสะดวกในกระบวนการเก็บรวบรวมข้อมูลสำหรับบุคลากรทางการแพทย์อย่างมีประสิทธิภาพ',
+            'ตอบสนองความต้องการของบริษัทและวัตถุประสงค์ของโปรเจกต์ได้สำเร็จ',
+            'เพิ่มความสามารถในการวิเคราะห์ข้อมูลด้วยการควบคุมการเข้าถึงที่ปลอดภัย'
+          ]
+        },
+        links: {}
+      },
+      {
+        id: 'iot-hardware-documentation',
+        title: {
+          en: 'IoT Hardware Documentation Website',
+          th: 'เว็บไซต์เอกสารฮาร์ดแวร์ IoT'
+        },
+        description: {
+          en: 'Comprehensive static website documenting embedded systems and IoT hardware components for Embedded Systems course project.',
+          th: 'เว็บไซต์สแตติกที่ครอบคลุมสำหรับเอกสารระบบฝังตัวและฮาร์ดแวร์ IoT สำหรับโปรเจกต์รายวิชา Embedded Systems'
+        },
+        fullDescription: {
+          en: 'A comprehensive static documentation website created as a solo project for the Embedded Systems course to explain various embedded systems and IoT hardware components and their capabilities. The website covers detailed information about Raspberry Pi, Node-RED, IoT Pi, ChatBot integration, ESP32, RS485 communication, Think Board PLC, Siemens Logo 8, HMI, Modbus PLC, and other industrial automation components. Each section provides clear explanations of what each component is, how it works, and what it can accomplish in embedded systems and automation projects.',
+          th: 'เว็บไซต์เอกสารสแตติกที่ครอบคลุมซึ่งสร้างขึ้นเป็นโปรเจกต์เดี่ยวสำหรับรายวิชา Embedded Systems เพื่ออธิบายระบบฝังตัวและฮาร์ดแวร์ IoT ต่างๆ และความสามารถของพวกมัน เว็บไซต์ครอบคลุมข้อมูลรายละเอียดเกี่ยวกับ Raspberry Pi, Node-RED, IoT Pi, การรวม ChatBot, ESP32, การสื่อสาร RS485, Think Board PLC, Siemens Logo 8, HMI, Modbus PLC และคอมโพเนนต์ระบบอัตโนมัติในอุตสาหกรรมอื่นๆ แต่ละส่วนให้คำอธิบายที่ชัดเจนเกี่ยวกับคอมโพเนนต์แต่ละตัวคืออะไร ทำงานอย่างไร และสามารถทำอะไรได้ในโปรเจกต์ระบบฝังตัวและระบบอัตโนมัติ'
+        },
+        tech: ['HTML', 'CSS', 'Firebase'],
+        status: 'Completed',
+        duration: '2 months',
+        team: {
+          en: 'Solo Project',
+          th: 'โปรเจกต์เดี่ยว'
+        },
+        images: [
+          '/images/projects/iot-hardware-documentation/1.png',
+          '/images/projects/iot-hardware-documentation/2.png',
+          '/images/projects/iot-hardware-documentation/3.png',
+          '/images/projects/iot-hardware-documentation/4.png',
+          '/images/projects/iot-hardware-documentation/5.png',
+          '/images/projects/iot-hardware-documentation/6.png',
+          '/images/projects/iot-hardware-documentation/7.png',
+
+        ],
+        challenges: {
+          en: [
+            'Organizing and structuring vast amounts of technical information',
+            'Creating clear and understandable explanations for complex hardware components',
+            'Designing intuitive navigation for multiple hardware categories'
+          ],
+          th: [
+            'การจัดระเบียบและจัดโครงสร้างข้อมูลทางเทคนิคจำนวนมาก',
+            'การสร้างคำอธิบายที่ชัดเจนและเข้าใจง่ายสำหรับคอมโพเนนต์ฮาร์ดแวร์ที่ซับซ้อน',
+            'การออกแบบการนำทางที่ใช้งานง่ายสำหรับหมวดหมู่ฮาร์ดแวร์หลายประเภท'
+          ]
+        },
+        solutions: {
+          en: [
+            'Developed systematic content organization with clear categorization',
+            'Created detailed documentation with practical examples and use cases',
+            'Implemented responsive design for optimal viewing across devices'
+          ],
+          th: [
+            'พัฒนาการจัดระเบียบเนื้อหาแบบเป็นระบบพร้อมการจัดหมวดหมู่ที่ชัดเจน',
+            'สร้างเอกสารรายละเอียดพร้อมตัวอย่างการใช้งานจริงและกรณีการใช้งาน',
+            'ใช้การออกแบบที่ตอบสนองสำหรับการดูที่เหมาะสมในอุปกรณ์ต่างๆ'
+          ]
+        },
+        results: {
+          en: [
+            'Comprehensive documentation covering 10+ IoT hardware components',
+            'Clear educational resource for understanding industrial automation',
+            'Successfully deployed static website with Firebase hosting'
+          ],
+          th: [
+            'เอกสารที่ครอบคลุมคอมโพเนนต์ฮาร์ดแวร์ IoT มากกว่า 10 ชนิด',
+            'แหล่งข้อมูลทางการศึกษาที่ชัดเจนสำหรับการทำความเข้าใจระบบอัตโนมัติในอุตสาหกรรม',
+            'เว็บไซต์สแตติกที่ใช้งานได้สำเร็จพร้อม Firebase hosting'
+          ]
+        },
+        links: {
+          website: 'https://em-b-92544.web.app/?fbclid=IwY2xjawNZoM9leHRuA2FlbQIxMABicmlkETF2V2YzT0RXMFJoRjFGMm5EAR5sq7AfYfCuQLPj1lk80f3GacsJgq5mPAI7TN7cfxwIEvlCWY_rB0m2749lgA_aem_I-ySWLUrCErOWH766X4F-A'
+        }
+      },
+      {
+        id: 'education-guidance-website',
+        title: {
+          en: 'Education Guidance Website',
+          th: 'เว็บไซต์แนะแนวการศึกษา'
+        },
+        description: {
+          en: 'Interactive guidance website for high school students providing information about university life, academic programs, and campus experiences at Suranaree University of Technology.',
+          th: 'เว็บไซต์แนะแนวแบบโต้ตอบสำหรับนักเรียนมัธยมปลาย ให้ข้อมูลเกี่ยวกับชีวิตมหาวิทยาลัย, หลักสูตรการศึกษา และประสบการณ์ในมหาวิทยาลัยเทคโนโลยีสุรนารี'
+        },
+        fullDescription: {
+          en: 'A comprehensive guidance website created as a solo project to help high school students understand university life and academic programs. The website features interactive content about Suranaree University of Technology, including detailed information about different academic majors, teaching methods, faculty experiences, campus life, and daily student activities. The site includes voice features with AI-generated speech to enhance user engagement and accessibility.',
+          th: 'เว็บไซต์แนะแนวที่ครอบคลุมซึ่งสร้างขึ้นเป็นโปรเจกต์เดี่ยวเพื่อช่วยนักเรียนมัธยมปลายเข้าใจชีวิตมหาวิทยาลัยและหลักสูตรการศึกษา เว็บไซต์มีเนื้อหาแบบโต้ตอบเกี่ยวกับมหาวิทยาลัยเทคโนโลยีสุรนารี รวมถึงข้อมูลรายละเอียดเกี่ยวกับสาขาวิชาต่างๆ, วิธีการสอน, ประสบการณ์ของอาจารย์, ชีวิตในมหาวิทยาลัย และกิจกรรมประจำวันของนักศึกษา เว็บไซต์มีฟีเจอร์เสียงด้วย AI-generated speech เพื่อเพิ่มการมีส่วนร่วมของผู้ใช้และความสามารถในการเข้าถึง'
+        },
+        tech: ['HTML', 'CSS', 'JavaScript', 'Vercel'],
+        status: 'Completed',
+        duration: '1 day',
+        team: {
+          en: 'Solo Project - Educational Guidance',
+          th: 'โปรเจกต์เดี่ยว - แนะแนวการศึกษา'
+        },
+        images: [
+          '/images/projects/education-guidance-website/1.png',
+          '/images/projects/education-guidance-website/2.png',
+          '/images/projects/education-guidance-website/3.png',
+          '/images/projects/education-guidance-website/4.png',
+        ],
+        challenges: {
+          en: [
+            'Organizing and presenting complex university information in an engaging way',
+            'Implementing voice features with AI-generated speech for better accessibility'
+          ],
+          th: [
+            'การจัดระเบียบและนำเสนอข้อมูลมหาวิทยาลัยที่ซับซ้อนในรูปแบบที่น่าสนใจ',
+            'การใช้งานฟีเจอร์เสียงด้วย AI-generated speech เพื่อความสามารถในการเข้าถึงที่ดีขึ้น'
+          ]
+        },
+        solutions: {
+          en: [
+            'Developed structured content organization with clear sections for different aspects of university life',
+            'Integrated AI voice features to enhance user experience and accessibility',
+            'Created responsive design with intuitive navigation and interactive elements',
+            'Implemented user-friendly interface for easy navigation'
+          ],
+          th: [
+            'พัฒนาการจัดระเบียบเนื้อหาแบบมีโครงสร้างพร้อมส่วนที่ชัดเจนสำหรับแง่มุมต่างๆ ของชีวิตมหาวิทยาลัย',
+            'รวมฟีเจอร์เสียง AI เพื่อเพิ่มประสบการณ์ผู้ใช้และความสามารถในการเข้าถึง',
+            'สร้างการออกแบบที่ตอบสนองพร้อมการนำทางที่ใช้งานง่ายและองค์ประกอบแบบโต้ตอบ',
+            'ใช้งานอินเทอร์เฟซที่ใช้งานง่ายสำหรับการนำทางที่สะดวก'
+          ]
+        },
+        results: {
+          en: [
+            'Successfully created comprehensive guidance resource for high school students',
+            'Enhanced accessibility with AI voice features'
+          ],
+          th: [
+            'สร้างแหล่งข้อมูลแนะแนวที่ครอบคลุมสำหรับนักเรียนมัธยมปลายได้สำเร็จ',
+            'เพิ่มความสามารถในการเข้าถึงด้วยฟีเจอร์เสียง AI'
+          ]
+        },
+        links: {
+          website: 'https://education-guidance-activities-for-kws.netlify.app/index.html'
         }
       }
     ]
@@ -360,200 +560,271 @@ export const projectCategories: ProjectCategory[] = [
     icon: 'Zap',
     projects: [
       {
-        id: 'ai-chatbot',
+        id: 'data extraction ultrasound-label-box',
         title: {
-          en: 'AI Chatbot Integration',
-          th: 'การรวมระบบ AI Chatbot'
+          en: 'Ultrasound Data Extraction - Crop & OCR System',
+          th: 'ระบบสกัดข้อมูลอัลตร้าซาวด์ - Crop & OCR'
         },
         description: {
-          en: 'Intelligent chatbot system with natural language processing and real-time communication capabilities.',
-          th: 'ระบบแชทบอทอัจฉริยะพร้อมการประมวลผลภาษาธรรมชาติและความสามารถในการสื่อสารแบบเรียลไทม์'
+          en: 'AI-powered ultrasound data extraction system with interactive crop boxes for region selection and OCR text extraction from draggable selection areas.',
+          th: 'ระบบสกัดข้อมูลอัลตร้าซาวด์ขับเคลื่อนด้วย AI พร้อมกล่อง crop แบบโต้ตอบสำหรับการเลือกพื้นที่และสกัดข้อความด้วย OCR จากพื้นที่ที่ลาก'
         },
         fullDescription: {
-          en: 'An advanced AI chatbot system that leverages natural language processing to provide intelligent responses. The system integrates with OpenAI\'s API to understand user intent and generate contextual responses. Features include conversation memory, multi-language support, and real-time communication using WebSockets. The chatbot can handle complex queries and maintain context throughout conversations.',
-          th: 'ระบบ AI Chatbot ขั้นสูงที่ใช้ประโยชน์จากการประมวลผลภาษาธรรมชาติเพื่อให้การตอบกลับที่ชาญฉลาด ระบบรวมเข้ากับ API ของ OpenAI เพื่อเข้าใจเจตนาของผู้ใช้และสร้างการตอบกลับตามบริบท ฟีเจอร์ต่างๆ ได้แก่ หน่วยความจำการสนทนา, การรองรับหลายภาษา และการสื่อสารแบบเรียลไทม์โดยใช้ WebSockets แชทบอทสามารถจัดการกับคำถามที่ซับซ้อนและรักษาบริบทตลอดการสนทนา'
+          en: 'An intelligent ultrasound data extraction system using AI OCR technology. Users can drag and create crop boxes on medical images to select specific regions for data extraction. The system extracts text data from the cropped areas using OCR technology. It processes complex medical information from PDF files and applies automated validation. After extraction, the data is automatically saved and uploaded to cloud storage via API integration. The workflow includes PDF import, interactive draggable crop box creation, OCR text extraction from selected regions, automated form filling, and cloud synchronization.',
+          th: 'ระบบสกัดข้อมูลอัลตร้าซาวด์อัจฉริยะโดยใช้เทคโนโลยี AI OCR ผู้ใช้สามารถลากและสร้างกล่อง crop บนภาพทางการแพทย์เพื่อเลือกพื้นที่เฉพาะสำหรับการสกัดข้อมูล ระบบสกัดข้อมูลข้อความจากพื้นที่ที่ crop โดยใช้เทคโนโลยี OCR ประมวลผลข้อมูลทางการแพทย์ที่ซับซ้อนจากไฟล์ PDF และใช้การตรวจสอบอัตโนมัติ หลังจากสกัดข้อมูลแล้ว ข้อมูลจะถูกบันทึกและอัปโหลดไปยังการจัดเก็บบนคลาวด์ผ่านการรวม API กระบวนการทำงานรวมถึงการนำเข้า PDF, การสร้างกล่อง crop แบบลากได้แบบโต้ตอบ, การสกัดข้อความด้วย OCR จากพื้นที่ที่เลือก, การกรอกฟอร์มอัตโนมัติ และการซิงค์กับคลาวด์'
         },
-        tech: ['Python', 'OpenAI', 'WebSocket', 'NLP', 'FastAPI', 'PostgreSQL', 'Docker'],
+        tech: ['Python', 'FastAPI', 'OCR' ,'Customtkinter'],
         status: 'Completed',
-        duration: '4 months',
+        duration: '1 week',
         team: {
-          en: 'Solo Project',
-          th: 'โปรเจกต์เดี่ยว'
+          en: 'Solo Project - Extrac AI',
+          th: 'โปรเจกต์เดี่ยว - AI สกัดข้อมูล ทางการแพทย์'
         },
         images: [
-          '/images/chatbot-interface.png',
-          '/images/chatbot-training.png',
-          '/images/chatbot-analytics.png'
+          '/images/projects/data extraction ultrasound-label-box/1.png',
         ],
         challenges: {
           en: [
-            'Integrating OpenAI API for intelligent responses',
-            'Managing conversation context and memory'
+            'Creating interactive draggable crop box system for precise region selection',
+            'Implementing accurate OCR text extraction from cropped image regions',
+            'Processing large volumes of complex medical data with validation'
           ],
           th: [
-            'รวม OpenAI API สำหรับการตอบกลับที่ชาญฉลาด',
-            'จัดการบริบทและหน่วยความจำการสนทนา'
+            'การสร้างระบบกล่อง crop แบบลากได้แบบโต้ตอบสำหรับการเลือกพื้นที่ที่แม่นยำ',
+            'การใช้งานการสกัดข้อความ OCR ที่แม่นยำจากพื้นที่รูปภาพที่ crop',
+            'การประมวลผลข้อมูลทางการแพทย์จำนวนมากและซับซ้อนพร้อมการตรวจสอบ'
           ]
         },
         solutions: {
           en: [
-            'Used OpenAI API with custom prompt engineering',
-            'Implemented Redis for conversation state management',
-            'Built WebSocket connection for real-time communication'
+            'Developed interactive drag-and-drop crop box system using Customtkinter',
+            'Implemented AI OCR integration for text extraction from cropped regions',
+            'Created automated validation and form-filling system for medical data'
           ],
           th: [
-            'ใช้ OpenAI API พร้อม Prompt Engineering ที่กำหนดเอง',
-            'ใช้งาน Redis สำหรับการจัดการสถานะการสนทนา',
-            'สร้างการเชื่อมต่อ WebSocket สำหรับการสื่อสารแบบเรียลไทม์'
+            'พัฒนาระบบกล่อง crop แบบลากและวางโดยใช้ Customtkinter',
+            'ใช้งานการรวม AI OCR สำหรับการสกัดข้อความจากพื้นที่ที่ crop',
+            'สร้างระบบตรวจสอบอัตโนมัติและการกรอกฟอร์มสำหรับข้อมูลทางการแพทย์'
           ]
         },
         results: {
           en: [
-            'Natural language understanding with high accuracy',
-            'Real-time response delivery',
-            'Persistent conversation memory'
+            'Successfully implemented draggable crop box system for precise region selection',
+            'Achieved high accuracy in OCR text extraction from cropped image areas',
+            'Streamlined medical data processing with automated validation and form filling'
           ],
           th: [
-            'การเข้าใจภาษาธรรมชาติด้วยความแม่นยำสูง',
-            'การส่งมอบการตอบกลับแบบเรียลไทม์',
-            'หน่วยความจำการสนทนาที่คงอยู่'
+            'ใช้งานระบบกล่อง crop แบบลากได้สำหรับการเลือกพื้นที่ที่แม่นยำได้สำเร็จ',
+            'บรรลุความแม่นยำสูงในการสกัดข้อความด้วย OCR จากพื้นที่รูปภาพที่ crop',
+            'ทำให้การประมวลผลข้อมูลทางการแพทย์ราบรื่นด้วยการตรวจสอบและกรอกฟอร์มอัตโนมัติ'
+          ]
+        },
+        links: {}
+      },
+      {
+        id: 'food-detection-yolo-transformers',
+        title: {
+          en: 'Food Detection and Classification',
+          th: 'การตรวจจับและจำแนกประเภทอาหาร'
+        },
+        description: {
+          en: 'Comparative study of YOLO and Vision Transformer (ViT) models for food detection and classification, analyzing performance under limited resources and dataset constraints.',
+          th: 'การศึกษาเปรียบเทียบโมเดล YOLO และ Vision Transformer (ViT) สำหรับการตรวจจับและจำแนกประเภทอาหาร วิเคราะห์ประสิทธิภาพภายใต้ข้อจำกัดด้านทรัพยากรและชุดข้อมูล'
+        },
+        fullDescription: {
+          en: 'A comprehensive Deep Learning project comparing the performance of YOLO (You Only Look Once) and Vision Transformer (ViT) models for food detection and classification. The study focuses on analyzing accuracy, training time, and resource requirements under limited computational resources and small dataset constraints. The project includes data augmentation techniques, hyperparameter optimization using Random Search, and detailed performance evaluation using mAP (mean Average Precision) metrics. The dataset consists of 10 Thai food classes with 1,200 images after augmentation, processed using Roboflow for labeling in both YOLO and Pascal VOC XML formats.',
+          th: 'โปรเจกต์ Deep Learning ที่ครอบคลุมเปรียบเทียบประสิทธิภาพของโมเดล YOLO (You Only Look Once) และ Vision Transformer (ViT) สำหรับการตรวจจับและจำแนกประเภทอาหาร การศึกษามุ่งเน้นการวิเคราะห์ความแม่นยำ, เวลาในการฝึก และความต้องการทรัพยากรภายใต้ข้อจำกัดด้านการคำนวณและชุดข้อมูลขนาดเล็ก โปรเจกต์รวมเทคนิคการเพิ่มข้อมูล, การปรับแต่งพารามิเตอร์ด้วย Random Search และการประเมินประสิทธิภาพโดยละเอียดด้วยเมตริก mAP (mean Average Precision) ชุดข้อมูลประกอบด้วยอาหารไทย 10 ประเภท พร้อมรูปภาพ 1,200 รูปหลังการเพิ่มข้อมูล ประมวลผลด้วย Roboflow สำหรับการป้ายกำกับในรูปแบบ YOLO และ Pascal VOC XML'
+        },
+        tech: ['Python', 'YOLO', 'Vision Transformer', 'PyTorch', 'Google Colab', 'Roboflow', 'mAP'],
+        status: 'Completed',
+        duration: '3 weeks',
+        team: {
+          en: 'Deep Learning Course Group Project (2 members)',
+          th: 'โปรเจกต์กลุ่มรายวิชา Deep Learning (2 คน)'
+        },
+        images: [
+          '/images/projects/food-detection-yolo-transformers/1.png',
+          '/images/projects/food-detection-yolo-transformers/2.png',
+          '/images/projects/food-detection-yolo-transformers/3.png',
+          '/images/projects/food-detection-yolo-transformers/4.png',
+          '/images/projects/food-detection-yolo-transformers/5.png',
+          '/images/projects/food-detection-yolo-transformers/6.png',
+        ],
+        challenges: {
+          en: [
+            'Limited dataset size requiring effective data augmentation techniques',
+            'Resource constraints affecting model training and hyperparameter optimization',
+            'Different output formats between YOLO and ViT requiring code adaptation'
+          ],
+          th: [
+            'ขนาดชุดข้อมูลที่จำกัดต้องการเทคนิคการเพิ่มข้อมูลที่มีประสิทธิภาพ',
+            'ข้อจำกัดด้านทรัพยากรที่ส่งผลต่อการฝึกโมเดลและการปรับแต่งพารามิเตอร์',
+            'รูปแบบผลลัพธ์ที่แตกต่างระหว่าง YOLO และ ViT ต้องการการปรับแต่งโค้ด'
+          ]
+        },
+        solutions: {
+          en: [
+            'Implemented data augmentation using Roboflow to increase dataset from 500 to 1,200 images',
+            'Used Random Search for hyperparameter optimization within resource constraints',
+            'Developed unified evaluation framework using mAP metrics for fair comparison'
+          ],
+          th: [
+            'ใช้งานการเพิ่มข้อมูลด้วย Roboflow เพื่อเพิ่มชุดข้อมูลจาก 500 เป็น 1,200 รูป',
+            'ใช้ Random Search สำหรับการปรับแต่งพารามิเตอร์ภายใต้ข้อจำกัดด้านทรัพยากร',
+            'พัฒนากรอบการประเมินแบบรวมด้วยเมตริก mAP สำหรับการเปรียบเทียบที่ไม่ลำเอียง'
+          ]
+        },
+        results: {
+          en: [
+            'YOLO achieved mAP@0.5: 0.88 and mAP@0.5:0.95: 0.71 with 45-minute training time',
+            'ViT achieved mAP@0.5: 0.336 and mAP@0.5:0.95: 0.456 with 60-70 minute training time',
+            'Successfully compared 10 Thai food classes with comprehensive performance analysis'
+          ],
+          th: [
+            'YOLO บรรลุ mAP@0.5: 0.88 และ mAP@0.5:0.95: 0.71 ด้วยเวลาในการฝึก 45 นาที',
+            'ViT บรรลุ mAP@0.5: 0.336 และ mAP@0.5:0.95: 0.456 ด้วยเวลาในการฝึก 60-70 นาที',
+            'เปรียบเทียบอาหารไทย 10 ประเภทได้สำเร็จพร้อมการวิเคราะห์ประสิทธิภาพที่ครอบคลุม'
+          ]
+        },
+
+      },
+      {
+        id: 'stock-price-prediction-rnn-lstm-gru',
+        title: {
+          en: 'Stock Price Prediction using RNN, LSTM, and GRU',
+          th: 'การพยากรณ์ราคาหุ้นด้วย RNN, LSTM และ GRU'
+        },
+        description: {
+          en: 'Comprehensive time series analysis project comparing three deep learning models (RNN, LSTM, GRU) for NVIDIA stock price prediction using historical market data.',
+          th: 'โปรเจกต์วิเคราะห์อนุกรมเวลาที่ครอบคลุมเปรียบเทียบโมเดล Deep Learning 3 แบบ (RNN, LSTM, GRU) สำหรับการพยากรณ์ราคาหุ้น NVIDIA โดยใช้ข้อมูลตลาดในอดีต'
+        },
+        fullDescription: {
+          en: 'A comprehensive Deep Learning project that implements and compares three different recurrent neural network architectures for stock price prediction. The project uses NVIDIA stock data including Open, High, Low, Close prices to predict future stock values. Three models are implemented: Simple RNN for basic sequence learning, LSTM (Long Short-Term Memory) for handling long-term dependencies, and GRU (Gated Recurrent Unit) for efficient memory management. The project includes both Many-to-One and Many-to-Many prediction approaches, with detailed performance analysis using metrics like MAPE, MSE, and R². All models are trained on historical data and tested for future price prediction accuracy.',
+          th: 'โปรเจกต์ Deep Learning ที่ครอบคลุมซึ่งใช้งานและเปรียบเทียบสถาปัตยกรรม Recurrent Neural Network 3 แบบที่แตกต่างกันสำหรับการพยากรณ์ราคาหุ้น โปรเจกต์ใช้ข้อมูลหุ้น NVIDIA รวมถึงราคาเปิด, สูงสุด, ต่ำสุด, ปิด เพื่อพยากรณ์มูลค่าหุ้นในอนาคต ใช้งานโมเดล 3 แบบ: Simple RNN สำหรับการเรียนรู้ลำดับพื้นฐาน, LSTM (Long Short-Term Memory) สำหรับจัดการความสัมพันธ์ระยะยาว, และ GRU (Gated Recurrent Unit) สำหรับการจัดการหน่วยความจำที่มีประสิทธิภาพ โปรเจกต์รวมทั้งแนวทาง Many-to-One และ Many-to-Many ในการพยากรณ์ พร้อมการวิเคราะห์ประสิทธิภาพโดยละเอียดด้วยเมตริกเช่น MAPE, MSE และ R² โมเดลทั้งหมดได้รับการฝึกด้วยข้อมูลในอดีตและทดสอบความแม่นยำในการพยากรณ์ราคาในอนาคต'
+        },
+        tech: ['Python', 'TensorFlow', 'Keras', 'Pandas', 'NumPy', 'Google Colab', 'Plotly', 'Matplotlib'],
+        status: 'Completed',
+        duration: '1 week',
+        team: {
+          en: 'Deep Learning Course Group Project',
+          th: 'โปรเจกต์กลุ่มรายวิชา Deep Learning'
+        },
+        images: [
+          '/images/projects/stock-price-prediction-rnn-lstm-gru/1.png',
+          '/images/projects/stock-price-prediction-rnn-lstm-gru/2.png',
+          '/images/projects/stock-price-prediction-rnn-lstm-gru/3.png',
+          '/images/projects/stock-price-prediction-rnn-lstm-gru/4.png',
+          '/images/projects/stock-price-prediction-rnn-lstm-gru/5.png',
+
+        ],
+        challenges: {
+          en: [
+            'Handling time series data preprocessing and sequence creation for different model architectures',
+            'Managing vanishing gradient problem in RNN models for long-term dependencies',
+            'Optimizing hyperparameters for three different neural network architectures'
+          ],
+          th: [
+            'การจัดการการประมวลผลข้อมูลอนุกรมเวลาและการสร้างลำดับสำหรับสถาปัตยกรรมโมเดลที่แตกต่างกัน',
+            'การจัดการปัญหา vanishing gradient ในโมเดล RNN สำหรับความสัมพันธ์ระยะยาว',
+            'การปรับแต่งพารามิเตอร์สำหรับสถาปัตยกรรม Neural Network 3 แบบที่แตกต่างกัน'
+          ]
+        },
+        solutions: {
+          en: [
+            'Implemented MinMaxScaler for data normalization and created 30-day sequences for training',
+            'Used LSTM and GRU architectures with gating mechanisms to address vanishing gradient issues',
+            'Applied dropout regularization and different layer configurations for each model type',
+            'Developed comprehensive evaluation framework with multiple metrics and visualization'
+          ],
+          th: [
+            'ใช้งาน MinMaxScaler สำหรับการปรับมาตรฐานข้อมูลและสร้างลำดับ 30 วันสำหรับการฝึก',
+            'ใช้สถาปัตยกรรม LSTM และ GRU พร้อมกลไก gating เพื่อแก้ปัญหา vanishing gradient',
+            'ใช้ dropout regularization และการกำหนดค่าชั้นที่แตกต่างกันสำหรับแต่ละประเภทโมเดล',
+            'พัฒนากรอบการประเมินที่ครอบคลุมด้วยเมตริกหลายตัวและการแสดงผล'
+          ]
+        },
+        results: {
+          en: [
+            'Successfully implemented and compared three RNN architectures for stock prediction',
+            'Achieved different performance levels across models with LSTM showing best long-term memory',
+            'Generated comprehensive visualizations comparing actual vs predicted stock prices',
+            'Demonstrated effectiveness of gated architectures over simple RNN for time series prediction'
+          ],
+          th: [
+            'ใช้งานและเปรียบเทียบสถาปัตยกรรม RNN 3 แบบสำหรับการพยากรณ์หุ้นได้สำเร็จ',
+            'บรรลุระดับประสิทธิภาพที่แตกต่างกันระหว่างโมเดล โดย LSTM แสดงความจำระยะยาวที่ดีที่สุด',
+            'สร้างการแสดงผลที่ครอบคลุมเปรียบเทียบราคาหุ้นจริงกับราคาที่พยากรณ์',
+            'แสดงให้เห็นประสิทธิภาพของสถาปัตยกรรม gated มากกว่า RNN ธรรมดาสำหรับการพยากรณ์อนุกรมเวลา'
           ]
         },
         links: {
-          demo: 'https://chatbot-demo.com',
-          github: 'https://github.com/chanchai/ai-chatbot'
+          github: 'https://github.com/Chanchai2004/Stock-Price-Prediction-RNN-LSTM-GRU.git',
+          demo: 'https://colab.research.google.com/drive/1E8dAGOpAuOw7uOf1MjponqTUwL_2xM1X'
         }
       },
       {
-        id: 'image-recognition',
+        id: 'housing-price-prediction-feature-analysis',
         title: {
-          en: 'Image Recognition System',
-          th: 'ระบบจดจำภาพ'
+          en: 'Housing Price Prediction - Feature Analysis',
+          th: 'การทำนายราคาบ้าน - การวิเคราะห์ความสำคัญของฟีเจอร์'
         },
         description: {
-          en: 'Computer vision application for object detection and classification using deep learning models.',
-          th: 'แอปพลิเคชัน Computer Vision สำหรับการตรวจจับและจำแนกวัตถุโดยใช้โมเดล Deep Learning'
+          en: 'Machine learning project analyzing and ranking feature importance for housing price prediction using Linear Regression and Ridge Regression models.',
+          th: 'โปรเจกต์ Machine Learning วิเคราะห์และจัดอันดับความสำคัญของฟีเจอร์สำหรับการทำนายราคาบ้านโดยใช้โมเดล Linear Regression และ Ridge Regression'
         },
         fullDescription: {
-          en: 'A sophisticated computer vision system built with TensorFlow and OpenCV for real-time object detection and classification. The system can identify and classify objects in images and video streams with high accuracy. Features include custom model training, batch processing, and real-time inference capabilities. The application includes a web interface for uploading images and viewing results.',
-          th: 'ระบบ Computer Vision ที่ซับซ้อนซึ่งสร้างด้วย TensorFlow และ OpenCV สำหรับการตรวจจับและจำแนกวัตถุแบบเรียลไทม์ ระบบสามารถระบุและจำแนกวัตถุในภาพและสตรีมวิดีโอด้วยความแม่นยำสูง ฟีเจอร์ต่างๆ ได้แก่ การฝึกโมเดลที่กำหนดเอง, การประมวลผลแบบแบตช์ และความสามารถในการอนุมานแบบเรียลไทม์ แอปพลิเคชันรวมถึงอินเทอร์เฟซเว็บสำหรับการอัปโหลดภาพและดูผลลัพธ์'
+          en: 'A comprehensive machine learning project that analyzes various housing features to determine their impact on property prices. The project implements both Linear Regression and Ridge Regression (L2 Regularization) models to evaluate feature importance. Features analyzed include area, number of bedrooms, bathrooms, stories, parking spaces, and amenities such as main road access, guest rooms, basement, hot water heating, air conditioning, and furnishing status. Each feature is tested individually to calculate error metrics (MSE, MAE, MAPE, RMSE) and R-squared scores, providing insights into which factors have the most significant impact on housing prices. The analysis reveals that area has the highest correlation with price (R² = 0.272), followed by bathrooms (R² = 0.218) and stories (R² = 0.190).',
+          th: 'โปรเจกต์ Machine Learning ที่ครอบคลุมซึ่งวิเคราะห์ฟีเจอร์ต่างๆ ของบ้านเพื่อกำหนดผลกระทบต่อราคาอสังหาริมทรัพย์ โปรเจกต์ใช้งานโมเดล Linear Regression และ Ridge Regression (L2 Regularization) เพื่อประเมินความสำคัญของฟีเจอร์ ฟีเจอร์ที่วิเคราะห์รวมถึงพื้นที่, จำนวนห้องนอน, ห้องน้ำ, ชั้น, ที่จอดรถ, และสิ่งอำนวยความสะดวกต่างๆ เช่น การเข้าถึงถนนหลัก, ห้องรับแขก, ห้องใต้ดิน, เครื่องทำน้ำร้อน, เครื่องปรับอากาศ, และสถานะการตกแต่ง แต่ละฟีเจอร์ถูกทดสอบแยกกันเพื่อคำนวณเมตริกข้อผิดพลาด (MSE, MAE, MAPE, RMSE) และคะแนน R-squared ให้ข้อมูลเชิงลึกว่าปัจจัยใดมีผลกระทบที่สำคัญที่สุดต่อราคาบ้าน การวิเคราะห์เผยให้เห็นว่าพื้นที่มีความสัมพันธ์สูงสุดกับราคา (R² = 0.272) รองลงมาคือห้องน้ำ (R² = 0.218) และจำนวนชั้น (R² = 0.190)'
         },
-        tech: ['Python', 'TensorFlow', 'OpenCV', 'CNN', 'Flask', 'NumPy', 'Pandas'],
-        status: 'In Progress',
-        duration: '5 months',
+        tech: ['Python', 'Scikit-learn', 'Pandas', 'NumPy', 'Linear Regression', 'Ridge Regression', 'Google Colab'],
+        status: 'Completed',
+        duration: '3 days',
         team: {
-          en: 'Research Team (2 members)',
-          th: 'ทีมวิจัย (2 คน)'
+          en: 'Deep Learning Course Group Project (2 members)',
+          th: 'โปรเจกต์กลุ่มรายวิชา Deep Learning (2 คน)'
         },
         images: [
-          '/images/recognition-upload.png',
-          '/images/recognition-results.png',
-          '/images/recognition-training.png'
+          '/images/projects/housing-price-prediction-feature-analysis/1.png',
+          '/images/projects/housing-price-prediction-feature-analysis/2.png',
+          '/images/projects/housing-price-prediction-feature-analysis/3.png',
         ],
         challenges: {
           en: [
-            'Training accurate CNN models with limited dataset',
-            'Optimizing inference speed for real-time detection',
-            'Handling various image qualities and formats'
+            'Converting categorical features to numerical format for model training',
+            'Determining optimal regularization parameter (alpha) for Ridge Regression'
           ],
           th: [
-            'ฝึกโมเดล CNN ที่แม่นยำด้วยชุดข้อมูลที่จำกัด',
-            'เพิ่มประสิทธิภาพความเร็วการอนุมานสำหรับการตรวจจับแบบเรียลไทม์',
-            'จัดการกับคุณภาพและรูปแบบภาพที่หลากหลาย'
+            'การแปลงฟีเจอร์เชิงหมวดหมู่เป็นรูปแบบตัวเลขสำหรับการฝึกโมเดล',
+            'การกำหนดค่าพารามิเตอร์ regularization (alpha) ที่เหมาะสมสำหรับ Ridge Regression'
           ]
         },
         solutions: {
           en: [
-            'Applied data augmentation to expand training dataset',
-            'Used TensorFlow Lite for optimized inference',
-            'Built preprocessing pipeline with OpenCV'
+            'Applied data preprocessing with pandas to convert categorical variables to binary (0/1) format',
+            'Implemented both Linear Regression and Ridge Regression models for comparison',
+            'Conducted individual feature testing to calculate MSE, MAE, MAPE, RMSE, and R² scores'
           ],
           th: [
-            'ใช้ Data Augmentation เพื่อขยายชุดข้อมูลการฝึก',
-            'ใช้ TensorFlow Lite สำหรับการอนุมานที่ได้รับการเพิ่มประสิทธิภาพ',
-            'สร้าง Pipeline การประมวลผลล่วงหน้าด้วย OpenCV'
+            'ใช้การประมวลผลข้อมูลด้วย pandas เพื่อแปลงตัวแปรเชิงหมวดหมู่เป็นรูปแบบไบนารี (0/1)',
+            'ใช้งานโมเดล Linear Regression และ Ridge Regression สำหรับการเปรียบเทียบ',
+            'ทดสอบฟีเจอร์แต่ละตัวเพื่อคำนวณคะแนน MSE, MAE, MAPE, RMSE และ R²'
           ]
         },
         results: {
           en: [
-            '90% accuracy in object detection',
-            'Real-time processing at 30 FPS'
+            'Area identified as most important feature with highest R² score (0.272)',
+            'Bathrooms ranked second (R² = 0.218) and stories third (R² = 0.190)',
+            'Ridge Regression prevented overfitting through L2 regularization'
           ],
           th: [
-            'ความแม่นยำ 90% ในการตรวจจับวัตถุ',
-            'การประมวลผลแบบเรียลไทม์ที่ 30 FPS'
+            'พื้นที่ถูกระบุว่าเป็นฟีเจอร์ที่สำคัญที่สุดด้วยคะแนน R² สูงสุด (0.272)',
+            'ห้องน้ำอันดับสอง (R² = 0.218) และจำนวนชั้นอันดับสาม (R² = 0.190)',
+            'Ridge Regression ป้องกัน overfitting ผ่าน L2 regularization'
           ]
         },
         links: {
-          demo: 'https://image-recognition-demo.com',
-          github: 'https://github.com/chanchai/image-recognition'
-        }
-      },
-      {
-        id: 'predictive-analytics',
-        title: {
-          en: 'Predictive Analytics Dashboard',
-          th: 'แดชบอร์ดการวิเคราะห์เชิงคาดการณ์'
-        },
-        description: {
-          en: 'Data analysis platform with machine learning models for business intelligence and forecasting.',
-          th: 'แพลตฟอร์มการวิเคราะห์ข้อมูลพร้อมโมเดล Machine Learning สำหรับธุรกิจอัจฉริยะและการพยากรณ์'
-        },
-        fullDescription: {
-          en: 'A comprehensive business intelligence platform that combines data analysis with machine learning for predictive insights. The system processes large datasets, applies various ML algorithms, and presents results through interactive dashboards. Features include automated data preprocessing, model training, and visualization of trends and predictions. The platform helps businesses make data-driven decisions.',
-          th: 'แพลตฟอร์มธุรกิจอัจฉริยะที่ครอบคลุมซึ่งรวมการวิเคราะห์ข้อมูลกับ Machine Learning สำหรับข้อมูลเชิงลึกเชิงคาดการณ์ ระบบประมวลผลชุดข้อมูลขนาดใหญ่ ใช้อัลกอริทึม ML ต่างๆ และนำเสนอผลลัพธ์ผ่านแดชบอร์ดแบบอินเทอร์แอคทีฟ ฟีเจอร์ต่างๆ ได้แก่ การประมวลผลล่วงหน้าข้อมูลอัตโนมัติ, การฝึกโมเดล และการแสดงภาพแนวโน้มและการคาดการณ์ แพลตฟอร์มช่วยให้ธุรกิจตัดสินใจโดยอิงจากข้อมูล'
-        },
-        tech: ['Python', 'Pandas', 'Scikit-learn', 'D3.js', 'Flask', 'PostgreSQL', 'Docker'],
-        status: 'Planning',
-        duration: '6 months',
-        team: {
-          en: 'Data Science Team (4 members)',
-          th: 'ทีม Data Science (4 คน)'
-        },
-        images: [
-          '/images/analytics-dashboard.png',
-          '/images/analytics-models.png',
-          '/images/analytics-predictions.png'
-        ],
-        challenges: {
-          en: [
-            'Processing large datasets efficiently',
-            'Creating intuitive visualizations for business users'
-          ],
-          th: [
-            'ประมวลผลชุดข้อมูลขนาดใหญ่อย่างมีประสิทธิภาพ',
-            'สร้างการแสดงภาพที่ใช้งานง่ายสำหรับผู้ใช้ทางธุรกิจ'
-          ]
-        },
-        solutions: {
-          en: [
-            'Used Pandas with optimized data processing pipelines',
-            'Built interactive dashboards with D3.js',
-            'Applied Scikit-learn for predictive modeling'
-          ],
-          th: [
-            'ใช้ Pandas พร้อม Pipeline การประมวลผลข้อมูลที่ได้รับการเพิ่มประสิทธิภาพ',
-            'สร้างแดชบอร์ดแบบอินเทอร์แอคทีฟด้วย D3.js',
-            'ใช้ Scikit-learn สำหรับการสร้างโมเดลเชิงคาดการณ์'
-          ]
-        },
-        results: {
-          en: [
-            '85% accuracy in forecasting',
-            'Interactive data exploration tools',
-            'Automated model training and evaluation',
-            'Scalable architecture for large datasets'
-          ],
-          th: [
-            'ความแม่นยำ 85% ในการพยากรณ์',
-            'เครื่องมือสำรวจข้อมูลแบบอินเทอร์แอคทีฟ',
-            'การฝึกและประเมินโมเดลอัตโนมัติ',
-            'สถาปัตยกรรมที่ปรับขนาดได้สำหรับชุดข้อมูลขนาดใหญ่'
-          ]
-        },
-        links: {
-          demo: 'https://analytics-demo.com',
-          github: 'https://github.com/chanchai/predictive-analytics'
+          github: 'https://github.com/Chanchai2004/Housing-Price-Feature-Analysis.git',
+          demo: 'https://colab.research.google.com/drive/1VwUlGixGvzThrRRA-u715l15_Vwh_4g_'
         }
       }
     ]
@@ -567,197 +838,144 @@ export const projectCategories: ProjectCategory[] = [
     icon: 'Cpu',
     projects: [
       {
-        id: 'iot-sensor-network',
+        id: 'rfid-attendance-raspberry-pi',
         title: {
-          en: 'IoT Sensor Network',
-          th: 'เครือข่ายเซ็นเซอร์ IoT'
+          en: 'RFID Attendance System with Raspberry Pi',
+          th: 'ระบบเช็คชื่อด้วย RFID บน Raspberry Pi'
         },
         description: {
-          en: 'Internet of Things system with multiple sensors, data collection, and real-time monitoring dashboard.',
-          th: 'ระบบ Internet of Things พร้อมเซ็นเซอร์หลายตัว, การรวบรวมข้อมูล และแดชบอร์ดการตรวจสอบแบบเรียลไทม์'
+          en: 'IoT-based attendance tracking system using RFID technology, Raspberry Pi 4, and MariaDB for automated student check-in management.',
+          th: 'ระบบติดตามการเช็คชื่อแบบ IoT โดยใช้เทคโนโลยี RFID, Raspberry Pi 4 และ MariaDB สำหรับการจัดการเช็คอินนักเรียนอัตโนมัติ'
         },
         fullDescription: {
-          en: 'A comprehensive IoT system that connects multiple sensors to collect environmental data and provide real-time monitoring capabilities. The system includes temperature, humidity, light, and motion sensors connected via MQTT protocol. Data is collected, processed, and visualized through a web-based dashboard. The system supports remote configuration and alert notifications.',
-          th: 'ระบบ IoT ที่ครอบคลุมซึ่งเชื่อมต่อเซ็นเซอร์หลายตัวเพื่อรวบรวมข้อมูลสิ่งแวดล้อมและให้ความสามารถในการตรวจสอบแบบเรียลไทม์ ระบบรวมถึงเซ็นเซอร์อุณหภูมิ, ความชื้น, แสง และการเคลื่อนไหวที่เชื่อมต่อผ่าน MQTT Protocol ข้อมูลถูกรวบรวม ประมวลผล และแสดงภาพผ่านแดชบอร์ดบนเว็บ ระบบรองรับการกำหนดค่าระยะไกลและการแจ้งเตือน'
+          en: 'A comprehensive IoT attendance management system developed for Operating Systems course. The project integrates RFID RC522 module with Raspberry Pi 4 to create an automated check-in system for students. Features include student registration via RFID card scanning, automated attendance tracking with status classification (Present/Late/Absent) based on arrival time, course schedule management, database backup to USB flash drive, and buzzer feedback for successful scans. The system uses MariaDB for data persistence and Python for hardware interfacing with GPIO pins. The project demonstrates embedded systems programming, database management, and hardware integration on Linux-based OS.',
+          th: 'ระบบการจัดการเช็คชื่อแบบ IoT ที่ครอบคลุมซึ่งพัฒนาสำหรับรายวิชา Operating Systems โปรเจกต์รวม RFID RC522 module กับ Raspberry Pi 4 เพื่อสร้างระบบเช็คอินอัตโนมัติสำหรับนักเรียน ฟีเจอร์รวมถึงการลงทะเบียนนักเรียนผ่านการสแกนบัตร RFID, การติดตามการเช็คชื่ออัตโนมัติพร้อมการจำแนกสถานะ (มา/มาสาย/ขาด) ตามเวลามาถึง, การจัดการตารางเรียน, การสำรองข้อมูลไปยัง USB flash drive และ buzzer สำหรับตอบกลับการสแกนที่สำเร็จ ระบบใช้ MariaDB สำหรับการจัดเก็บข้อมูลและ Python สำหรับการเชื่อมต่อฮาร์ดแวร์กับพิน GPIO โปรเจกต์แสดงการเขียนโปรแกรมระบบฝังตัว, การจัดการฐานข้อมูล และการรวมฮาร์ดแวร์บน OS ที่ใช้ Linux'
         },
-        tech: ['Arduino', 'Raspberry Pi', 'MQTT', 'Python', 'Node.js', 'MongoDB', 'Grafana'],
+        tech: ['Raspberry Pi 4', 'Python', 'RFID RC522', 'MariaDB', 'GPIO', 'SPI', 'Linux OS', 'MySQL Connector'],
         status: 'Completed',
-        duration: '3 months',
+        duration: '2 weeks',
         team: {
-          en: 'IoT Team (2 members)',
-          th: 'ทีม IoT (2 คน)'
+          en: 'Operating Systems Course Group Project',
+          th: 'โปรเจกต์กลุ่มรายวิชา Operating Systems'
         },
         images: [
-          '/images/iot-sensors.png',
-          '/images/iot-dashboard.png',
-          '/images/iot-network.png'
+          '/images/projects/rfid-attendance-raspberry-pi/1.jpg',
+          '/images/projects/rfid-attendance-raspberry-pi/2.jpg',
+          '/images/projects/rfid-attendance-raspberry-pi/4.jpg'
         ],
         challenges: {
           en: [
-            'Ensuring reliable MQTT communication between multiple devices',
-            'Managing power consumption for battery-operated sensors'
+            'Interfacing RFID RC522 module with Raspberry Pi GPIO using SPI protocol',
+            'Managing MariaDB database operations on resource-constrained embedded system',
+            'Implementing real-time attendance status classification based on course schedules'
           ],
           th: [
-            'รับประกันการสื่อสาร MQTT ที่เชื่อถือได้ระหว่างอุปกรณ์หลายตัว',
-            'จัดการการใช้พลังงานสำหรับเซ็นเซอร์ที่ใช้แบตเตอรี่'
+            'การเชื่อมต่อ RFID RC522 module กับ Raspberry Pi GPIO โดยใช้โปรโตคอล SPI',
+            'การจัดการการทำงานของฐานข้อมูล MariaDB บนระบบฝังตัวที่มีทรัพยากรจำกัด',
+            'การใช้งานการจำแนกสถานะการเช็คชื่อแบบเรียลไทม์ตามตารางเรียน'
           ]
         },
         solutions: {
           en: [
-            'Implemented MQTT protocol with QoS levels',
-            'Used Arduino sleep modes for power efficiency',
-            'Built real-time dashboard with Grafana and Node.js'
+            'Configured SPI interface and GPIO pins for RFID reader communication with Python libraries',
+            'Designed normalized database schema with 5 tables for students, courses, schedules, and attendance',
+            'Implemented time-based logic for attendance status with duplicate check-in prevention',
+            'Added USB flash drive support for database backup and restore functionality'
           ],
           th: [
-            'ใช้งาน MQTT Protocol พร้อมระดับ QoS',
-            'ใช้โหมดสลีป Arduino เพื่อประสิทธิภาพพลังงาน',
-            'สร้างแดชบอร์ดแบบเรียลไทม์ด้วย Grafana และ Node.js'
+            'กำหนดค่าอินเทอร์เฟซ SPI และพิน GPIO สำหรับการสื่อสารของ RFID reader ด้วยไลบรารี Python',
+            'ออกแบบสคีมาฐานข้อมูลที่ปรับให้เป็นมาตรฐานด้วย 5 ตารางสำหรับนักเรียน, วิชา, ตารางเรียน และการเช็คชื่อ',
+            'ใช้งานตรรกะตามเวลาสำหรับสถานะการเช็คชื่อพร้อมการป้องกันการเช็คชื่อซ้ำ',
+            'เพิ่มการรองรับ USB flash drive สำหรับฟังก์ชันการสำรองข้อมูลและการกู้คืน'
           ]
         },
         results: {
           en: [
-            '99% network uptime',
-            'Extended battery life (6+ months)',
-            'Real-time monitoring dashboard'
+            'Successfully deployed functional RFID attendance system with automated status tracking',
+            'Achieved 100% accurate student identification through RFID card scanning',
+            'Implemented complete database management with backup/restore to USB drive',
+            'Created reliable hardware-software integration with buzzer feedback system'
           ],
           th: [
-            'เวลาทำงานของเครือข่าย 99%',
-            'อายุแบตเตอรี่ที่ยาวนานขึ้น (6+ เดือน)',
-            'แดชบอร์ดการตรวจสอบแบบเรียลไทม์'
+            'ติดตั้งระบบเช็คชื่อ RFID ที่ทำงานได้พร้อมการติดตามสถานะอัตโนมัติสำเร็จ',
+            'บรรลุการระบุตัวตนนักเรียนที่แม่นยำ 100% ผ่านการสแกนบัตร RFID',
+            'ใช้งานการจัดการฐานข้อมูลที่สมบูรณ์พร้อมการสำรองข้อมูล/กู้คืนไปยัง USB drive',
+            'สร้างการรวมฮาร์ดแวร์-ซอฟต์แวร์ที่เชื่อถือได้พร้อมระบบตอบกลับด้วย buzzer'
           ]
         },
         links: {
-          demo: 'https://iot-dashboard.com',
-          github: 'https://github.com/chanchai/iot-sensor-network'
+          github: 'https://github.com/Chanchai2004/Pi-RFID-Attendance-Tracker.git',
+          demo: 'https://drive.google.com/file/d/1zvMX1VxE48uVO-xt54P8NTFb9XSdDjGL/view?usp=sharing'
         }
       },
       {
-        id: 'custom-linux',
+        id: 'iot-hardware-documentation',
         title: {
-          en: 'Custom Linux Distribution',
-          th: 'Linux Distribution แบบกำหนดเอง'
+          en: 'IoT Hardware Documentation Website',
+          th: 'เว็บไซต์เอกสารฮาร์ดแวร์ IoT'
         },
         description: {
-          en: 'Lightweight Linux distribution optimized for embedded systems and specific hardware requirements.',
-          th: 'Linux Distribution ที่มีน้ำหนักเบาซึ่งปรับให้เหมาะสมสำหรับระบบฝังตัวและความต้องการฮาร์ดแวร์เฉพาะ'
+          en: 'Comprehensive static website documenting embedded systems and IoT hardware components for Embedded Systems course project.',
+          th: 'เว็บไซต์สแตติกที่ครอบคลุมสำหรับเอกสารระบบฝังตัวและฮาร์ดแวร์ IoT สำหรับโปรเจกต์รายวิชา Embedded Systems'
         },
         fullDescription: {
-          en: 'A custom Linux distribution built from scratch using Buildroot for embedded systems. The distribution is optimized for specific hardware requirements with minimal resource usage. Features include custom kernel configuration, optimized boot process, and specialized packages for embedded applications. The system is designed for industrial automation and IoT devices.',
-          th: 'Linux Distribution ที่กำหนดเองซึ่งสร้างขึ้นตั้งแต่ต้นโดยใช้ Buildroot สำหรับระบบฝังตัว การกระจายได้รับการปรับให้เหมาะสมสำหรับความต้องการฮาร์ดแวร์เฉพาะด้วยการใช้ทรัพยากรที่น้อยที่สุด ฟีเจอร์ต่างๆ ได้แก่ การกำหนดค่า Kernel ที่กำหนดเอง, กระบวนการบูตที่ได้รับการเพิ่มประสิทธิภาพ และแพ็คเกจเฉพาะทางสำหรับแอปพลิเคชันฝังตัว ระบบออกแบบมาสำหรับระบบอัตโนมัติอุตสาหกรรมและอุปกรณ์ IoT'
+          en: 'A comprehensive static documentation website created as a solo project for the Embedded Systems course to explain various embedded systems and IoT hardware components and their capabilities. The website covers detailed information about Raspberry Pi, Node-RED, IoT Pi, ChatBot integration, ESP32, RS485 communication, Think Board PLC, Siemens Logo 8, HMI, Modbus PLC, and other industrial automation components. Each section provides clear explanations of what each component is, how it works, and what it can accomplish in embedded systems and automation projects.',
+          th: 'เว็บไซต์เอกสารสแตติกที่ครอบคลุมซึ่งสร้างขึ้นเป็นโปรเจกต์เดี่ยวสำหรับรายวิชา Embedded Systems เพื่ออธิบายระบบฝังตัวและฮาร์ดแวร์ IoT ต่างๆ และความสามารถของพวกมัน เว็บไซต์ครอบคลุมข้อมูลรายละเอียดเกี่ยวกับ Raspberry Pi, Node-RED, IoT Pi, การรวม ChatBot, ESP32, การสื่อสาร RS485, Think Board PLC, Siemens Logo 8, HMI, Modbus PLC และคอมโพเนนต์ระบบอัตโนมัติในอุตสาหกรรมอื่นๆ แต่ละส่วนให้คำอธิบายที่ชัดเจนเกี่ยวกับคอมโพเนนต์แต่ละตัวคืออะไร ทำงานอย่างไร และสามารถทำอะไรได้ในโปรเจกต์ระบบฝังตัวและระบบอัตโนมัติ'
         },
-        tech: ['Linux', 'Kernel', 'C/C++', 'Buildroot', 'U-Boot', 'BusyBox', 'Cross-compilation'],
-        status: 'In Progress',
-        duration: '4 months',
+        tech: ['HTML', 'CSS', 'Firebase'],
+        status: 'Completed',
+        duration: '2 months',
         team: {
-          en: 'Embedded Systems Team (3 members)',
-          th: 'ทีมระบบฝังตัว (3 คน)'
+          en: 'Embedded Systems Course - Solo Project',
+          th: 'โปรเจกต์เดี่ยวรายวิชา Embedded Systems'
         },
         images: [
-          '/images/linux-build.png',
-          '/images/linux-boot.png',
-          '/images/linux-system.png'
+          '/images/projects/iot-hardware-documentation/1.png',
+          '/images/projects/iot-hardware-documentation/2.png',
+          '/images/projects/iot-hardware-documentation/3.png',
+          '/images/projects/iot-hardware-documentation/4.png',
+          '/images/projects/iot-hardware-documentation/5.png',
+          '/images/projects/iot-hardware-documentation/6.png',
+          '/images/projects/iot-hardware-documentation/7.png',
         ],
         challenges: {
           en: [
-            'Optimizing Linux kernel for embedded hardware',
-            'Minimizing system footprint for limited resources',
-            'Creating fast boot process'
+            'Organizing and structuring vast amounts of technical information',
+            'Creating clear and understandable explanations for complex hardware components',
+            'Designing intuitive navigation for multiple hardware categories'
           ],
           th: [
-            'เพิ่มประสิทธิภาพ Linux Kernel สำหรับฮาร์ดแวร์ฝังตัว',
-            'ลดขนาดระบบสำหรับทรัพยากรที่จำกัด',
-            'สร้างกระบวนการบูตที่เร็ว'
+            'การจัดระเบียบและจัดโครงสร้างข้อมูลทางเทคนิคจำนวนมาก',
+            'การสร้างคำอธิบายที่ชัดเจนและเข้าใจง่ายสำหรับคอมโพเนนต์ฮาร์ดแวร์ที่ซับซ้อน',
+            'การออกแบบการนำทางที่ใช้งานง่ายสำหรับหมวดหมู่ฮาร์ดแวร์หลายประเภท'
           ]
         },
         solutions: {
           en: [
-            'Used Buildroot for custom kernel compilation',
-            'Removed unnecessary kernel modules and services',
-            'Optimized init system with custom scripts'
+            'Developed systematic content organization with clear categorization',
+            'Created detailed documentation with practical examples and use cases',
+            'Implemented responsive design for optimal viewing across devices'
           ],
           th: [
-            'ใช้ Buildroot สำหรับการคอมไพล์ Kernel ที่กำหนดเอง',
-            'ลบโมดูล Kernel และบริการที่ไม่จำเป็นออก',
-            'เพิ่มประสิทธิภาพระบบ Init ด้วยสคริปต์ที่กำหนดเอง'
+            'พัฒนาการจัดระเบียบเนื้อหาแบบเป็นระบบพร้อมการจัดหมวดหมู่ที่ชัดเจน',
+            'สร้างเอกสารรายละเอียดพร้อมตัวอย่างการใช้งานจริงและกรณีการใช้งาน',
+            'ใช้การออกแบบที่ตอบสนองสำหรับการดูที่เหมาะสมในอุปกรณ์ต่างๆ'
           ]
         },
         results: {
           en: [
-            '50% smaller system footprint',
-            'Boot time under 10 seconds'
+            'Comprehensive documentation covering 10+ IoT hardware components',
+            'Clear educational resource for understanding industrial automation',
+            'Successfully deployed static website with Firebase hosting'
           ],
           th: [
-            'ขนาดระบบเล็กลง 50%',
-            'เวลาบูตต่ำกว่า 10 วินาที'
+            'เอกสารที่ครอบคลุมคอมโพเนนต์ฮาร์ดแวร์ IoT มากกว่า 10 ชนิด',
+            'แหล่งข้อมูลทางการศึกษาที่ชัดเจนสำหรับการทำความเข้าใจระบบอัตโนมัติในอุตสาหกรรม',
+            'เว็บไซต์สแตติกที่ใช้งานได้สำเร็จพร้อม Firebase hosting'
           ]
         },
         links: {
-          github: 'https://github.com/chanchai/custom-linux'
-        }
-      },
-      {
-        id: 'embedded-controller',
-        title: {
-          en: 'Embedded System Controller',
-          th: 'ตัวควบคุมระบบฝังตัว'
-        },
-        description: {
-          en: 'Microcontroller-based control system for industrial automation and monitoring applications.',
-          th: 'ระบบควบคุมที่ใช้ไมโครคอนโทรลเลอร์สำหรับการใช้งานระบบอัตโนมัติและการตรวจสอบในอุตสาหกรรม'
-        },
-        fullDescription: {
-          en: 'An advanced embedded control system designed for industrial automation applications. The system uses STM32 microcontrollers with FreeRTOS for real-time task management. Features include Modbus communication protocol, sensor integration, actuator control, and data logging capabilities. The system provides reliable control for industrial processes with safety features and fault detection.',
-          th: 'ระบบควบคุมฝังตัวขั้นสูงที่ออกแบบมาสำหรับการใช้งานระบบอัตโนมัติในอุตสาหกรรม ระบบใช้ไมโครคอนโทรลเลอร์ STM32 พร้อม FreeRTOS สำหรับการจัดการงานแบบเรียลไทม์ ฟีเจอร์ต่างๆ ได้แก่ Modbus Communication Protocol, การรวมเซ็นเซอร์, การควบคุม Actuator และความสามารถในการบันทึกข้อมูล ระบบให้การควบคุมที่เชื่อถือได้สำหรับกระบวนการอุตสาหกรรมพร้อมฟีเจอร์ความปลอดภัยและการตรวจจับข้อผิดพลาด'
-        },
-        tech: ['STM32', 'FreeRTOS', 'C', 'Modbus', 'CAN Bus', 'ADC', 'PWM'],
-        status: 'Planning',
-        duration: '5 months',
-        team: {
-          en: 'Industrial Automation Team (3 members)',
-          th: 'ทีมระบบอัตโนมัติอุตสาหกรรม (3 คน)'
-        },
-        images: [
-          '/images/embedded-hardware.png',
-          '/images/embedded-control.png',
-          '/images/embedded-monitoring.png'
-        ],
-        challenges: {
-          en: [
-            'Implementing real-time control with FreeRTOS',
-            'Ensuring reliable Modbus communication in harsh environments'
-          ],
-          th: [
-            'ใช้งานการควบคุมแบบเรียลไทม์ด้วย FreeRTOS',
-            'รับประกันการสื่อสาร Modbus ที่เชื่อถือได้ในสภาพแวดล้อมที่รุนแรง'
-          ]
-        },
-        solutions: {
-          en: [
-            'Used FreeRTOS for deterministic real-time scheduling',
-            'Implemented Modbus RTU with error checking',
-            'Built safety system with fault detection'
-          ],
-          th: [
-            'ใช้ FreeRTOS สำหรับการกำหนดเวลาแบบเรียลไทม์ที่แน่นอน',
-            'ใช้งาน Modbus RTU พร้อมการตรวจสอบข้อผิดพลาด',
-            'สร้างระบบความปลอดภัยพร้อมการตรวจจับข้อผิดพลาด'
-          ]
-        },
-        results: {
-          en: [
-            'Real-time control with microsecond precision',
-            'Reliable Modbus communication',
-            'Safety-critical operation capability'
-          ],
-          th: [
-            'การควบคุมแบบเรียลไทม์ด้วยความแม่นยำระดับไมโครวินาที',
-            'การสื่อสาร Modbus ที่เชื่อถือได้',
-            'ความสามารถในการดำเนินงานที่สำคัญต่อความปลอดภัย'
-          ]
-        },
-        links: {
-          demo: 'https://embedded-controller-demo.com',
-          github: 'https://github.com/chanchai/embedded-controller'
+          website: 'https://em-b-92544.web.app/?fbclid=IwY2xjawNZoM9leHRuA2FlbQIxMABicmlkETF2V2YzT0RXMFJoRjFGMm5EAR5sq7AfYfCuQLPj1lk80f3GacsJgq5mPAI7TN7cfxwIEvlCWY_rB0m2749lgA_aem_I-ySWLUrCErOWH766X4F-A'
         }
       }
     ]
@@ -771,200 +989,337 @@ export const projectCategories: ProjectCategory[] = [
     icon: 'Cloud',
     projects: [
       {
-        id: 'docker-containerization',
+        id: 'personal-portfolio-deploy',
         title: {
-          en: 'Docker Containerization',
-          th: 'การทำ Containerization ด้วย Docker'
+          en: 'Personal Portfolio - Deployment',
+          th: 'Personal Portfolio - การติดตั้ง'
         },
         description: {
-          en: 'Containerized applications with Docker and Docker Compose for easy deployment and scaling.',
-          th: 'แอปพลิเคชันที่ทำ Containerization ด้วย Docker และ Docker Compose สำหรับการติดตั้งและการปรับขนาดที่ง่าย'
+          en: 'Full-stack deployment of personal portfolio website using Docker containerization, DigitalOcean hosting, and GoDaddy domain management.',
+          th: 'การติดตั้งเว็บไซต์พอร์ตโฟลิโอส่วนตัวแบบ Full-stack โดยใช้ Docker containerization, การโฮสต์ด้วย DigitalOcean และการจัดการโดเมนด้วย GoDaddy'
         },
         fullDescription: {
-          en: 'A comprehensive containerization solution using Docker and Docker Compose for application deployment and scaling. The project includes multi-stage builds for optimized images, container orchestration, and automated deployment pipelines. Features include health checks, logging, monitoring, and security best practices. The solution supports both development and production environments.',
-          th: 'โซลูชันการทำ Containerization ที่ครอบคลุมโดยใช้ Docker และ Docker Compose สำหรับการติดตั้งและการปรับขนาดแอปพลิเคชัน โปรเจกต์รวมถึง Multi-stage Builds สำหรับ Images ที่ได้รับการเพิ่มประสิทธิภาพ, การจัดการ Container และ Pipeline การติดตั้งอัตโนมัติ ฟีเจอร์ต่างๆ ได้แก่ การตรวจสอบสุขภาพ, การบันทึก, การตรวจสอบ และแนวทางปฏิบัติที่ดีที่สุดด้านความปลอดภัย โซลูชันรองรับทั้งสภาพแวดล้อมการพัฒนาและการใช้งานจริง'
+          en: 'A comprehensive deployment project showcasing modern DevOps practices for a full-stack portfolio website. The deployment process includes containerizing both frontend (Next.js) and backend (Go) applications using Docker, setting up multi-container orchestration with Docker Compose, deploying to DigitalOcean cloud infrastructure, and configuring custom domain through GoDaddy. The project demonstrates end-to-end deployment workflow including environment configuration, SSL/TLS setup, reverse proxy configuration with Nginx, and continuous deployment practices.',
+          th: 'โปรเจกต์การติดตั้งที่ครอบคลุมซึ่งแสดงแนวทาง DevOps สมัยใหม่สำหรับเว็บไซต์พอร์ตโฟลิโอแบบ Full-stack กระบวนการติดตั้งรวมถึงการทำ containerization ทั้งแอปพลิเคชัน frontend (Next.js) และ backend (Go) โดยใช้ Docker, การตั้งค่าการจัดการ multi-container ด้วย Docker Compose, การติดตั้งบนโครงสร้างพื้นฐานคลาวด์ DigitalOcean และการกำหนดค่าโดเมนที่กำหนดเองผ่าน GoDaddy โปรเจกต์แสดงให้เห็นเวิร์กโฟลว์การติดตั้งแบบ end-to-end รวมถึงการกำหนดค่าสภาพแวดล้อม, การตั้งค่า SSL/TLS, การกำหนดค่า reverse proxy ด้วย Nginx และแนวทางการติดตั้งอย่างต่อเนื่อง'
         },
-        tech: ['Docker', 'Docker Compose', 'Multi-stage Build', 'Optimization', 'Kubernetes', 'GitHub Actions'],
+        tech: ['Docker', 'Docker Compose', 'DigitalOcean', 'GoDaddy', 'Nginx', 'SSL/TLS', 'Next.js', 'Go'],
+        status: 'Completed',
+        duration: '2 weeks',
+        team: {
+          en: 'Solo Project - DevOps',
+          th: 'โปรเจกต์เดี่ยว - DevOps'
+        },
+        images: [
+          '/images/projects/personal-portfolio/hero.png',
+          '/images/projects/personal-portfolio/getIn.png',
+          '/images/projects/personal-portfolio/card.png',
+          '/images/projects/personal-portfolio/details.png'
+        ],
+        challenges: {
+          en: [
+            'Containerizing Next.js application with optimized build process',
+            'Setting up secure Docker Compose configuration for production'
+          ],
+          th: [
+            'การทำ containerization แอปพลิเคชัน Next.js ด้วยกระบวนการ build ที่เพิ่มประสิทธิภาพ',
+            'การตั้งค่า Docker Compose ที่ปลอดภัยสำหรับการใช้งานจริง'
+          ]
+        },
+        solutions: {
+          en: [
+            'Implemented multi-stage Docker builds for optimized image sizes',
+            'Deployed on DigitalOcean with Docker Compose orchestration',
+            'Configured custom domain via GoDaddy with SSL/TLS encryption'
+          ],
+          th: [
+            'ใช้งาน multi-stage Docker builds สำหรับขนาด image ที่เพิ่มประสิทธิภาพ',
+            'ติดตั้งบน DigitalOcean ด้วยการจัดการ Docker Compose',
+            'กำหนดค่าโดเมนที่กำหนดเองผ่าน GoDaddy พร้อมการเข้ารหัส SSL/TLS'
+          ]
+        },
+        results: {
+          en: [
+            'Successfully deployed full-stack application with 99.9% uptime',
+            'Optimized Docker images reducing deployment time by 60%',
+            'Secure HTTPS connection with custom domain'
+          ],
+          th: [
+            'ติดตั้งแอปพลิเคชัน full-stack ได้สำเร็จด้วย uptime 99.9%',
+            'เพิ่มประสิทธิภาพ Docker images ลดเวลาการติดตั้ง 60%',
+            'การเชื่อมต่อ HTTPS ที่ปลอดภัยด้วยโดเมนที่กำหนดเอง'
+          ]
+        },
+        links: {
+          website: 'https://yourportfolio.com',
+          github: 'https://github.com/chanchai/personal-portfolio'
+        }
+      },
+      {
+        id: 'rsp-northeast2-deploy',
+        title: {
+          en: 'RSP Northeast 2 - Deployment',
+          th: 'RSP Northeast 2 - การติดตั้ง'
+        },
+        description: {
+          en: 'Enterprise-grade deployment of facility management system with Docker containerization, DigitalOcean cloud hosting, and custom domain configuration.',
+          th: 'การติดตั้งระบบจัดการสิ่งอำนวยความสะดวกระดับองค์กรด้วย Docker containerization, การโฮสต์คลาวด์ DigitalOcean และการกำหนดค่าโดเมนที่กำหนดเอง'
+        },
+        fullDescription: {
+          en: 'A professional deployment project for the RSP Northeast 2 Facility Management System. The deployment architecture includes containerization of React Native frontend and Go backend using Docker, orchestration with Docker Compose for service management, deployment on DigitalOcean Droplets for reliable cloud hosting, and domain configuration through GoDaddy with SSL/TLS security. The project demonstrates production-ready deployment practices including load balancing, database containerization, automated backups, monitoring setup, and scalability considerations for handling multiple concurrent users.',
+          th: 'โปรเจกต์การติดตั้งระดับมืออาชีพสำหรับระบบจัดการสิ่งอำนวยความสะดวก RSP Northeast 2 สถาปัตยกรรมการติดตั้งรวมถึงการทำ containerization ของ frontend React Native และ backend Go โดยใช้ Docker, การจัดการด้วย Docker Compose สำหรับการจัดการบริการ, การติดตั้งบน DigitalOcean Droplets สำหรับการโฮสต์คลาวด์ที่เชื่อถือได้ และการกำหนดค่าโดเมนผ่าน GoDaddy ด้วยความปลอดภัย SSL/TLS โปรเจกต์แสดงให้เห็นแนวทางการติดตั้งที่พร้อมสำหรับการใช้งานจริงรวมถึง load balancing, การทำ containerization ฐานข้อมูล, การสำรองข้อมูลอัตโนมัติ, การตั้งค่าการตรวจสอบ และการพิจารณาการปรับขนาดสำหรับการจัดการผู้ใช้พร้อมกันหลายคน'
+        },
+        tech: ['Docker', 'Docker Compose', 'DigitalOcean', 'GoDaddy', 'Nginx', 'SSL/TLS', 'React Native', 'Go'],
+        status: 'Completed',
+        duration: '3 weeks',
+        team: {
+          en: 'Solo Project - Full-stack DevOps',
+          th: 'โปรเจกต์เดี่ยว - Full-stack DevOps'
+        },
+        images: [
+          '/images/projects/rsp-northeast2-system/ant.png',
+          '/images/projects/rsp-northeast2-system/booking.png',
+          '/images/projects/rsp-northeast2-system/home.png',
+          '/images/projects/rsp-northeast2-system/otp.png'
+        ],
+        challenges: {
+          en: [
+            'Deploying React Native web application in containerized environment',
+            'Managing database containerization with data persistence'
+          ],
+          th: [
+            'การติดตั้งแอปพลิเคชันเว็บ React Native ในสภาพแวดล้อม containerized',
+            'การจัดการ containerization ฐานข้อมูลด้วยการรักษาข้อมูล'
+          ]
+        },
+        solutions: {
+          en: [
+            'Containerized full-stack application with Docker multi-stage builds',
+            'Deployed on DigitalOcean with Docker Compose for service orchestration',
+            'Configured domain via GoDaddy with Let\'s Encrypt SSL certificates',
+            'Implemented automated backup system for PostgreSQL database'
+          ],
+          th: [
+            'ทำ containerization แอปพลิเคชัน full-stack ด้วย Docker multi-stage builds',
+            'ติดตั้งบน DigitalOcean ด้วย Docker Compose สำหรับการจัดการบริการ',
+            'กำหนดค่าโดเมนผ่าน GoDaddy ด้วยใบรับรอง SSL Let\'s Encrypt',
+            'ใช้งานระบบสำรองข้อมูลอัตโนมัติสำหรับฐานข้อมูล PostgreSQL'
+          ]
+        },
+        results: {
+          en: [
+            'Successfully deployed enterprise system serving 100+ users',
+            'Achieved 99.9% uptime with automated monitoring',
+            'Reduced deployment time from hours to minutes with Docker'
+          ],
+          th: [
+            'ติดตั้งระบบองค์กรที่ให้บริการผู้ใช้ 100+ คนได้สำเร็จ',
+            'บรรลุ uptime 99.9% ด้วยการตรวจสอบอัตโนมัติ',
+            'ลดเวลาการติดตั้งจากชั่วโมงเหลือนาทีด้วย Docker'
+          ]
+        },
+        links: {
+          website: 'https://rsp-northeast2.org'
+        }
+      },
+      {
+        id: 'hospital-management-deploy',
+        title: {
+          en: 'Hospital Management System - Deployment',
+          th: 'ระบบจัดการโรงพยาบาล - การติดตั้ง'
+        },
+        description: {
+          en: 'Cloud deployment of hospital management system with containerized microservices, secure hosting, and domain management for production use.',
+          th: 'การติดตั้งบนคลาวด์ของระบบจัดการโรงพยาบาลด้วย microservices ที่ทำ containerization, การโฮสต์ที่ปลอดภัย และการจัดการโดเมนสำหรับการใช้งานจริง'
+        },
+        fullDescription: {
+          en: 'A comprehensive deployment solution for a hospital management system developed as part of a Software Engineering course. The deployment includes containerizing the React Native frontend and Go backend with separate containers for payment and HR modules, orchestrating multiple services using Docker Compose, deploying on DigitalOcean cloud infrastructure for high availability, and configuring custom domain through GoDaddy with enterprise-grade security. The project showcases deployment of a complex multi-module system with role-based access control, secure API endpoints, and integration with external services like SMTP email and payment gateways.',
+          th: 'โซลูชันการติดตั้งที่ครอบคลุมสำหรับระบบจัดการโรงพยาบาลที่พัฒนาเป็นส่วนหนึ่งของหลักสูตร Software Engineering การติดตั้งรวมถึงการทำ containerization ของ frontend React Native และ backend Go พร้อมคอนเทนเนอร์แยกสำหรับโมดูลการชำระเงินและ HR, การจัดการบริการหลายตัวโดยใช้ Docker Compose, การติดตั้งบนโครงสร้างพื้นฐานคลาวด์ DigitalOcean สำหรับความพร้อมใช้งานสูง และการกำหนดค่าโดเมนที่กำหนดเองผ่าน GoDaddy ด้วยความปลอดภัยระดับองค์กร โปรเจกต์แสดงการติดตั้งระบบหลายโมดูลที่ซับซ้อนพร้อมการควบคุมการเข้าถึงตามบทบาท, จุดสิ้นสุด API ที่ปลอดภัย และการรวมกับบริการภายนอกเช่น SMTP email และ payment gateways'
+        },
+        tech: ['Docker', 'Docker Compose', 'DigitalOcean', 'GoDaddy', 'Nginx', 'SSL/TLS', 'React Native', 'Go', 'SQLite'],
+        status: 'Completed',
+        duration: '2 weeks',
+        team: {
+          en: 'Software Engineering Course - DevOps Role',
+          th: 'รายวิชา Software Engineering - บทบาท DevOps'
+        },
+        images: [
+          '/images/projects/hospital-management-system/1.png',
+          '/images/projects/hospital-management-system/22.png',
+          '/images/projects/hospital-management-system/2.png',
+          '/images/projects/hospital-management-system/3.png'
+        ],
+        challenges: {
+          en: [
+            'Containerizing multi-module system with separate payment and HR services',
+            'Ensuring secure deployment for sensitive medical data'
+          ],
+          th: [
+            'การทำ containerization ระบบหลายโมดูลด้วยบริการการชำระเงินและ HR แยกกัน',
+            'การรับประกันการติดตั้งที่ปลอดภัยสำหรับข้อมูลทางการแพทย์ที่ละเอียดอ่อน'
+          ]
+        },
+        solutions: {
+          en: [
+            'Implemented Docker microservices architecture for modular deployment',
+            'Deployed on DigitalOcean with Docker Compose for multi-container management',
+            'Configured domain via GoDaddy with SSL/TLS encryption for security'
+          ],
+          th: [
+            'ใช้งานสถาปัตยกรรม Docker microservices สำหรับการติดตั้งแบบโมดูลาร์',
+            'ติดตั้งบน DigitalOcean ด้วย Docker Compose สำหรับการจัดการ multi-container',
+            'กำหนดค่าโดเมนผ่าน GoDaddy ด้วยการเข้ารหัส SSL/TLS เพื่อความปลอดภัย'
+          ]
+        },
+        results: {
+          en: [
+            'Successfully deployed multi-module hospital system for 50+ users',
+            'Implemented secure role-based access with containerized authentication',
+            'Achieved zero-downtime deployment with Docker orchestration'
+          ],
+          th: [
+            'ติดตั้งระบบโรงพยาบาลหลายโมดูลสำหรับผู้ใช้ 50+ คนได้สำเร็จ',
+            'ใช้งานการเข้าถึงตามบทบาทที่ปลอดภัยด้วยการตรวจสอบสิทธิ์ที่ทำ containerization',
+            'บรรลุการติดตั้งแบบ zero-downtime ด้วยการจัดการ Docker'
+          ]
+        },
+        links: {
+          github: 'https://github.com/sut67/team04.git'
+        }
+      },
+      
+      {
+        id: 'iot-hardware-documentation',
+        title: {
+          en: 'IoT Hardware Documentation Website',
+          th: 'เว็บไซต์เอกสารฮาร์ดแวร์ IoT'
+        },
+        description: {
+          en: 'Comprehensive static website documenting embedded systems and IoT hardware components for Embedded Systems course project.',
+          th: 'เว็บไซต์สแตติกที่ครอบคลุมสำหรับเอกสารระบบฝังตัวและฮาร์ดแวร์ IoT สำหรับโปรเจกต์รายวิชา Embedded Systems'
+        },
+        fullDescription: {
+          en: 'A comprehensive static documentation website created as a solo project for the Embedded Systems course to explain various embedded systems and IoT hardware components and their capabilities. The website covers detailed information about Raspberry Pi, Node-RED, IoT Pi, ChatBot integration, ESP32, RS485 communication, Think Board PLC, Siemens Logo 8, HMI, Modbus PLC, and other industrial automation components. Each section provides clear explanations of what each component is, how it works, and what it can accomplish in embedded systems and automation projects.',
+          th: 'เว็บไซต์เอกสารสแตติกที่ครอบคลุมซึ่งสร้างขึ้นเป็นโปรเจกต์เดี่ยวสำหรับรายวิชา Embedded Systems เพื่ออธิบายระบบฝังตัวและฮาร์ดแวร์ IoT ต่างๆ และความสามารถของพวกมัน เว็บไซต์ครอบคลุมข้อมูลรายละเอียดเกี่ยวกับ Raspberry Pi, Node-RED, IoT Pi, การรวม ChatBot, ESP32, การสื่อสาร RS485, Think Board PLC, Siemens Logo 8, HMI, Modbus PLC และคอมโพเนนต์ระบบอัตโนมัติในอุตสาหกรรมอื่นๆ แต่ละส่วนให้คำอธิบายที่ชัดเจนเกี่ยวกับคอมโพเนนต์แต่ละตัวคืออะไร ทำงานอย่างไร และสามารถทำอะไรได้ในโปรเจกต์ระบบฝังตัวและระบบอัตโนมัติ'
+        },
+        tech: ['HTML', 'CSS', 'Firebase'],
         status: 'Completed',
         duration: '2 months',
         team: {
-          en: 'DevOps Team (2 members)',
-          th: 'ทีม DevOps (2 คน)'
+          en: 'Embedded Systems Course - Solo Project',
+          th: 'โปรเจกต์เดี่ยวรายวิชา Embedded Systems'
         },
         images: [
-          '/images/docker-containers.png',
-          '/images/docker-compose.png',
-          '/images/docker-deployment.png'
+          '/images/projects/iot-hardware-documentation/1.png',
+          '/images/projects/iot-hardware-documentation/2.png',
+          '/images/projects/iot-hardware-documentation/3.png',
+          '/images/projects/iot-hardware-documentation/4.png',
+          '/images/projects/iot-hardware-documentation/5.png',
+          '/images/projects/iot-hardware-documentation/6.png',
+          '/images/projects/iot-hardware-documentation/7.png',
         ],
         challenges: {
           en: [
-            'Optimizing Docker image size for faster deployment',
-            'Orchestrating multiple services with Docker Compose'
+            'Organizing and structuring vast amounts of technical information',
+            'Creating clear and understandable explanations for complex hardware components',
+            'Designing intuitive navigation for multiple hardware categories'
           ],
           th: [
-            'เพิ่มประสิทธิภาพขนาด Docker Image สำหรับการติดตั้งที่เร็วขึ้น',
-            'จัดการบริการหลายตัวด้วย Docker Compose'
+            'การจัดระเบียบและจัดโครงสร้างข้อมูลทางเทคนิคจำนวนมาก',
+            'การสร้างคำอธิบายที่ชัดเจนและเข้าใจง่ายสำหรับคอมโพเนนต์ฮาร์ดแวร์ที่ซับซ้อน',
+            'การออกแบบการนำทางที่ใช้งานง่ายสำหรับหมวดหมู่ฮาร์ดแวร์หลายประเภท'
           ]
         },
         solutions: {
           en: [
-            'Used multi-stage builds to minimize image size',
-            'Implemented Docker Compose for service management',
-            'Integrated GitHub Actions for automated deployment'
+            'Developed systematic content organization with clear categorization',
+            'Created detailed documentation with practical examples and use cases',
+            'Implemented responsive design for optimal viewing across devices'
           ],
           th: [
-            'ใช้ Multi-stage Builds เพื่อลดขนาด Image',
-            'ใช้งาน Docker Compose สำหรับการจัดการบริการ',
-            'รวม GitHub Actions สำหรับการติดตั้งอัตโนมัติ'
+            'พัฒนาการจัดระเบียบเนื้อหาแบบเป็นระบบพร้อมการจัดหมวดหมู่ที่ชัดเจน',
+            'สร้างเอกสารรายละเอียดพร้อมตัวอย่างการใช้งานจริงและกรณีการใช้งาน',
+            'ใช้การออกแบบที่ตอบสนองสำหรับการดูที่เหมาะสมในอุปกรณ์ต่างๆ'
           ]
         },
         results: {
           en: [
-            '70% smaller Docker images',
-            'Automated deployment pipeline',
-            'Easy service orchestration'
+            'Comprehensive documentation covering 10+ IoT hardware components',
+            'Clear educational resource for understanding industrial automation',
+            'Successfully deployed static website with Firebase hosting'
           ],
           th: [
-            'Docker Images เล็กลง 70%',
-            'Pipeline การติดตั้งอัตโนมัติ',
-            'การจัดการบริการที่ง่าย'
+            'เอกสารที่ครอบคลุมคอมโพเนนต์ฮาร์ดแวร์ IoT มากกว่า 10 ชนิด',
+            'แหล่งข้อมูลทางการศึกษาที่ชัดเจนสำหรับการทำความเข้าใจระบบอัตโนมัติในอุตสาหกรรม',
+            'เว็บไซต์สแตติกที่ใช้งานได้สำเร็จพร้อม Firebase hosting'
           ]
         },
         links: {
-          demo: 'https://docker-demo.com',
-          github: 'https://github.com/chanchai/docker-containerization'
+          website: 'https://em-b-92544.web.app/?fbclid=IwY2xjawNZoM9leHRuA2FlbQIxMABicmlkETF2V2YzT0RXMFJoRjFGMm5EAR5sq7AfYfCuQLPj1lk80f3GacsJgq5mPAI7TN7cfxwIEvlCWY_rB0m2749lgA_aem_I-ySWLUrCErOWH766X4F-A'
         }
       },
       {
-        id: 'github-actions-cicd',
+        id: 'education-guidance-website',
         title: {
-          en: 'GitHub Actions CI/CD',
-          th: 'GitHub Actions CI/CD'
+          en: 'Education Guidance Website',
+          th: 'เว็บไซต์แนะแนวการศึกษา'
         },
         description: {
-          en: 'Automated build, test, and deployment pipeline using GitHub Actions for continuous integration.',
-          th: 'Pipeline การสร้าง, ทดสอบ และติดตั้งอัตโนมัติโดยใช้ GitHub Actions สำหรับการรวมระบบอย่างต่อเนื่อง'
+          en: 'Interactive guidance website for high school students providing information about university life, academic programs, and campus experiences at Suranaree University of Technology.',
+          th: 'เว็บไซต์แนะแนวแบบโต้ตอบสำหรับนักเรียนมัธยมปลาย ให้ข้อมูลเกี่ยวกับชีวิตมหาวิทยาลัย, หลักสูตรการศึกษา และประสบการณ์ในมหาวิทยาลัยเทคโนโลยีสุรนารี'
         },
         fullDescription: {
-          en: 'A robust CI/CD pipeline built with GitHub Actions that automates the entire software development lifecycle. The pipeline includes automated testing, code quality checks, security scanning, and deployment to multiple environments. Features include parallel job execution, conditional deployments, and comprehensive reporting. The system ensures code quality and reliability before deployment.',
-          th: 'Pipeline CI/CD ที่แข็งแกร่งซึ่งสร้างด้วย GitHub Actions ที่ทำให้วงจรการพัฒนาซอฟต์แวร์ทั้งหมดเป็นอัตโนมัติ Pipeline รวมถึงการทดสอบอัตโนมัติ, การตรวจสอบคุณภาพโค้ด, การสแกนความปลอดภัย และการติดตั้งในสภาพแวดล้อมหลายแห่ง ฟีเจอร์ต่างๆ ได้แก่ การทำงานแบบขนาน, การติดตั้งตามเงื่อนไข และรายงานที่ครอบคลุม ระบบรับประกันคุณภาพและความน่าเชื่อถือของโค้ดก่อนการติดตั้ง'
+          en: 'A comprehensive guidance website created as a solo project to help high school students understand university life and academic programs. The website features interactive content about Suranaree University of Technology, including detailed information about different academic majors, teaching methods, faculty experiences, campus life, and daily student activities. The site includes voice features with AI-generated speech to enhance user engagement and accessibility.',
+          th: 'เว็บไซต์แนะแนวที่ครอบคลุมซึ่งสร้างขึ้นเป็นโปรเจกต์เดี่ยวเพื่อช่วยนักเรียนมัธยมปลายเข้าใจชีวิตมหาวิทยาลัยและหลักสูตรการศึกษา เว็บไซต์มีเนื้อหาแบบโต้ตอบเกี่ยวกับมหาวิทยาลัยเทคโนโลยีสุรนารี รวมถึงข้อมูลรายละเอียดเกี่ยวกับสาขาวิชาต่างๆ, วิธีการสอน, ประสบการณ์ของอาจารย์, ชีวิตในมหาวิทยาลัย และกิจกรรมประจำวันของนักศึกษา เว็บไซต์มีฟีเจอร์เสียงด้วย AI-generated speech เพื่อเพิ่มการมีส่วนร่วมของผู้ใช้และความสามารถในการเข้าถึง'
         },
-        tech: ['GitHub Actions', 'CI/CD', 'Automation', 'Testing', 'Security Scanning', 'Multi-environment Deployment'],
-        status: 'In Progress',
-        duration: '3 months',
+        tech: ['HTML', 'CSS', 'JavaScript', 'Vercel'],
+        status: 'Completed',
+        duration: '1 day',
         team: {
-          en: 'DevOps Team (3 members)',
-          th: 'ทีม DevOps (3 คน)'
+          en: 'Solo Project - Educational Guidance',
+          th: 'โปรเจกต์เดี่ยว - แนะแนวการศึกษา'
         },
         images: [
-          '/images/cicd-pipeline.png',
-          '/images/cicd-tests.png',
-          '/images/cicd-deployment.png'
+          '/images/projects/education-guidance-website/1.png',
+          '/images/projects/education-guidance-website/2.png',
+          '/images/projects/education-guidance-website/3.png',
+          '/images/projects/education-guidance-website/4.png',
         ],
         challenges: {
           en: [
-            'Automating build, test, and deployment process',
-            'Managing secrets securely in GitHub Actions',
-            'Deploying to multiple environments'
+            'Organizing and presenting complex university information in an engaging way',
+            'Implementing voice features with AI-generated speech for better accessibility'
           ],
           th: [
-            'ทำให้กระบวนการสร้าง, ทดสอบ และติดตั้งเป็นอัตโนมัติ',
-            'จัดการข้อมูลลับอย่างปลอดภัยใน GitHub Actions',
-            'ติดตั้งในสภาพแวดล้อมหลายแห่ง'
+            'การจัดระเบียบและนำเสนอข้อมูลมหาวิทยาลัยที่ซับซ้อนในรูปแบบที่น่าสนใจ',
+            'การใช้งานฟีเจอร์เสียงด้วย AI-generated speech เพื่อความสามารถในการเข้าถึงที่ดีขึ้น'
           ]
         },
         solutions: {
           en: [
-            'Built GitHub Actions workflows with automated testing',
-            'Used GitHub Secrets for credential management',
-            'Implemented environment-specific deployment jobs'
+            'Developed structured content organization with clear sections for different aspects of university life',
+            'Integrated AI voice features to enhance user experience and accessibility',
+            'Created responsive design with intuitive navigation and interactive elements',
+            'Implemented user-friendly interface for easy navigation'
           ],
           th: [
-            'สร้าง Workflows ของ GitHub Actions พร้อมการทดสอบอัตโนมัติ',
-            'ใช้ GitHub Secrets สำหรับการจัดการข้อมูลประจำตัว',
-            'ใช้งาน Deployment Jobs เฉพาะสภาพแวดล้อม'
+            'พัฒนาการจัดระเบียบเนื้อหาแบบมีโครงสร้างพร้อมส่วนที่ชัดเจนสำหรับแง่มุมต่างๆ ของชีวิตมหาวิทยาลัย',
+            'รวมฟีเจอร์เสียง AI เพื่อเพิ่มประสบการณ์ผู้ใช้และความสามารถในการเข้าถึง',
+            'สร้างการออกแบบที่ตอบสนองพร้อมการนำทางที่ใช้งานง่ายและองค์ประกอบแบบโต้ตอบ',
+            'ใช้งานอินเทอร์เฟซที่ใช้งานง่ายสำหรับการนำทางที่สะดวก'
           ]
         },
         results: {
           en: [
-            '95% automation of deployment tasks',
-            '90% code coverage with automated tests',
-            'Secure multi-environment deployment'
+            'Successfully created comprehensive guidance resource for high school students',
+            'Enhanced accessibility with AI voice features'
           ],
           th: [
-            'ระบบอัตโนมัติ 95% ของงานติดตั้ง',
-            'Code Coverage 90% ด้วยการทดสอบอัตโนมัติ',
-            'การติดตั้งหลายสภาพแวดล้อมที่ปลอดภัย'
+            'สร้างแหล่งข้อมูลแนะแนวที่ครอบคลุมสำหรับนักเรียนมัธยมปลายได้สำเร็จ',
+            'เพิ่มความสามารถในการเข้าถึงด้วยฟีเจอร์เสียง AI'
           ]
         },
         links: {
-          demo: 'https://cicd-demo.com',
-          github: 'https://github.com/chanchai/github-actions-cicd'
-        }
-      },
-      {
-        id: 'cloud-infrastructure',
-        title: {
-          en: 'Cloud Infrastructure',
-          th: 'โครงสร้างพื้นฐานบนคลาวด์'
-        },
-        description: {
-          en: 'Cloud-based infrastructure setup with auto-scaling, load balancing, and monitoring systems.',
-          th: 'การตั้งค่าโครงสร้างพื้นฐานบนคลาวด์พร้อมการปรับขนาดอัตโนมัติ, การกระจายโหลด และระบบตรวจสอบ'
-        },
-        fullDescription: {
-          en: 'A comprehensive cloud infrastructure solution built on AWS with auto-scaling, load balancing, and comprehensive monitoring. The infrastructure includes multi-tier architecture, database clustering, CDN integration, and disaster recovery capabilities. Features include automated scaling based on demand, health monitoring, and cost optimization. The system ensures high availability and performance.',
-          th: 'โซลูชันโครงสร้างพื้นฐานบนคลาวด์ที่ครอบคลุมซึ่งสร้างบน AWS พร้อมการปรับขนาดอัตโนมัติ, การกระจายโหลด และการตรวจสอบที่ครอบคลุม โครงสร้างพื้นฐานรวมถึงสถาปัตยกรรมหลายชั้น, การรวมกลุ่มฐานข้อมูล, การรวม CDN และความสามารถในการกู้คืนภัยพิบัติ ฟีเจอร์ต่างๆ ได้แก่ การปรับขนาดอัตโนมัติตามความต้องการ, การตรวจสอบสุขภาพ และการเพิ่มประสิทธิภาพต้นทุน ระบบรับประกันความพร้อมใช้งานสูงและประสิทธิภาพ'
-        },
-        tech: ['AWS', 'Load Balancer', 'Auto Scaling', 'Monitoring', 'CloudFormation', 'Terraform'],
-        status: 'Planning',
-        duration: '4 months',
-        team: {
-          en: 'Cloud Infrastructure Team (4 members)',
-          th: 'ทีมโครงสร้างพื้นฐานคลาวด์ (4 คน)'
-        },
-        images: [
-          '/images/cloud-architecture.png',
-          '/images/cloud-monitoring.png',
-          '/images/cloud-scaling.png'
-        ],
-        challenges: {
-          en: [
-            'Setting up auto-scaling infrastructure on AWS',
-            'Implementing load balancing for high availability'
-          ],
-          th: [
-            'ตั้งค่าโครงสร้างพื้นฐานการปรับขนาดอัตโนมัติบน AWS',
-            'ใช้งานการกระจายโหลดเพื่อความพร้อมใช้งานสูง'
-          ]
-        },
-        solutions: {
-          en: [
-            'Used AWS Auto Scaling Groups with CloudWatch metrics',
-            'Configured Application Load Balancer for traffic distribution',
-            'Applied Terraform for infrastructure as code'
-          ],
-          th: [
-            'ใช้ AWS Auto Scaling Groups พร้อม CloudWatch Metrics',
-            'กำหนดค่า Application Load Balancer สำหรับการกระจายทราฟฟิก',
-            'ใช้ Terraform สำหรับ Infrastructure as Code'
-          ]
-        },
-        results: {
-          en: [
-            '99.9% uptime achieved',
-            'Automatic scaling based on load',
-            '40% cost reduction through optimization'
-          ],
-          th: [
-            'บรรลุเวลาทำงาน 99.9%',
-            'การปรับขนาดอัตโนมัติตามโหลด',
-            'ลดต้นทุน 40% ผ่านการเพิ่มประสิทธิภาพ'
-          ]
-        },
-        links: {
-          demo: 'https://cloud-infrastructure-demo.com',
-          github: 'https://github.com/chanchai/cloud-infrastructure'
+          website: 'https://education-guidance-activities-for-kws.netlify.app/index.html'
         }
       }
     ]

@@ -55,6 +55,7 @@ export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedProject, setSelectedProject] = useState<any>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState('web-apps');
   const router = useRouter();
 
   useEffect(() => {
@@ -98,6 +99,11 @@ export default function Home() {
   };
 
   const handleProjectClick = (project: any) => {
+    // ลบ highlight class จากการ์ดที่ถูกคลิก
+    document.querySelectorAll('.highlight-project-card').forEach(card => {
+      card.classList.remove('highlight-project-card');
+    });
+    
     setSelectedProject(project);
     setIsModalOpen(true);
   };
@@ -105,6 +111,96 @@ export default function Home() {
   const handleCloseModal = () => {
     setIsModalOpen(false);
     setSelectedProject(null);
+  };
+
+  const handleViewScienceParkProject = () => {
+    console.log('🎯 handleViewScienceParkProject called');
+    
+    // เปลี่ยน tab ไปที่ Web Applications ก่อน
+    setActiveTab('web-apps');
+    console.log('✅ Changed tab to web-apps');
+    
+    // เลื่อนไปที่ส่วน Featured Projects
+    const projectsSection = document.getElementById('featured-projects');
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      console.log('✅ Scrolled to featured-projects section');
+    }
+    
+    // หน่วงเวลาให้ tab เปลี่ยนและเลื่อนเสร็จก่อน
+    setTimeout(() => {
+      console.log('⏰ Timeout 1: Looking for RSP card...');
+      
+      // ลบ highlight class จากการ์ดอื่นๆ ก่อน
+      document.querySelectorAll('.highlight-project-card').forEach(card => {
+        card.classList.remove('highlight-project-card');
+      });
+      
+      // เพิ่มคลาส highlight ให้กับการ์ด RSP Northeast 2
+      const rspCard = document.querySelector('[data-project-id="rsp-northeast2-system"]');
+      console.log('🔍 Found RSP card:', rspCard);
+      
+      if (rspCard) {
+        rspCard.classList.add('highlight-project-card');
+        console.log('✨ Added highlight-project-card class');
+        
+        // เลื่อนไปที่การ์ดนั้นเพิ่มเติม
+        setTimeout(() => {
+          rspCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          console.log('✅ Scrolled to RSP card');
+        }, 300);
+      } else {
+        console.error('❌ RSP card not found!');
+        // ลอง log all cards
+        const allCards = document.querySelectorAll('[data-project-id]');
+        console.log('📋 All project cards found:', Array.from(allCards).map(c => c.getAttribute('data-project-id')));
+      }
+    }, 1000);
+  };
+
+  const handleViewSkaiMedProject = () => {
+    console.log('🎯 handleViewSkaiMedProject called');
+    
+    // เปลี่ยน tab ไปที่ Web Applications ก่อน
+    setActiveTab('web-apps');
+    console.log('✅ Changed tab to web-apps');
+    
+    // เลื่อนไปที่ส่วน Featured Projects
+    const projectsSection = document.getElementById('featured-projects');
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      console.log('✅ Scrolled to featured-projects section');
+    }
+    
+    // หน่วงเวลาให้ tab เปลี่ยนและเลื่อนเสร็จก่อน
+    setTimeout(() => {
+      console.log('⏰ Timeout 1: Looking for SKAI PHI card...');
+      
+      // ลบ highlight class จากการ์ดอื่นๆ ก่อน
+      document.querySelectorAll('.highlight-project-card').forEach(card => {
+        card.classList.remove('highlight-project-card');
+      });
+      
+      // เพิ่มคลาส highlight ให้กับการ์ด SKAI PHI
+      const skaiCard = document.querySelector('[data-project-id="skai-phi-medical-system"]');
+      console.log('🔍 Found SKAI PHI card:', skaiCard);
+      
+      if (skaiCard) {
+        skaiCard.classList.add('highlight-project-card');
+        console.log('✨ Added highlight-project-card class');
+        
+        // เลื่อนไปที่การ์ดนั้นเพิ่มเติม
+        setTimeout(() => {
+          skaiCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          console.log('✅ Scrolled to SKAI PHI card');
+        }, 300);
+      } else {
+        console.error('❌ SKAI PHI card not found!');
+        // ลอง log all cards
+        const allCards = document.querySelectorAll('[data-project-id]');
+        console.log('📋 All project cards found:', Array.from(allCards).map(c => c.getAttribute('data-project-id')));
+      }
+    }, 1000);
   };
 
   if (!user || !isLoaded) {
@@ -177,7 +273,7 @@ export default function Home() {
                 variant="gradient"
                 size="lg"
                 className="group"
-                onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => document.getElementById('featured-projects')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 {language === 'en' ? 'View My Work' : 'ดูผลงานของฉัน'}
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -221,8 +317,7 @@ export default function Home() {
                   className="group opacity-50 cursor-not-allowed"
                   disabled
                 >
-                  {language === 'en' ? 'Get Access (Coming Soon)' : 'เข้าถึง (เร็วๆ นี้)'}
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  {language === 'en' ? 'Login' : 'เข้าสู่ระบบ'}
                 </Button>
               ) : (
                 <Button
@@ -252,7 +347,7 @@ export default function Home() {
                 ? 'Core programming skills and technologies I specialize in'
                 : 'ทักษะการเขียนโปรแกรมหลักและเทคโนโลยีที่ฉันเชี่ยวชาญ'}
             </p>
-          </div>
+            </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
             {[
@@ -302,7 +397,7 @@ export default function Home() {
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-[var(--foreground)] mb-4">
               {language === 'en' ? 'Experience & Collaborations' : 'ประสบการณ์และความร่วมมือ'}
-            </h2>
+              </h2>
             <p className="text-lg text-[var(--muted-foreground)] max-w-2xl mx-auto">
               {language === 'en' 
                 ? 'Professional partnerships and work experiences'
@@ -354,7 +449,7 @@ export default function Home() {
 
               <div className="text-[var(--muted-foreground)] leading-relaxed mb-6">
                 <p>{exp.fullDescription[language]}</p>
-              </div>
+                </div>
 
               {exp.tech && (
                 <div className="flex flex-wrap gap-2 mb-6">
@@ -374,7 +469,16 @@ export default function Home() {
                   variant="outline" 
                   size="sm" 
                   className="group"
-                  onClick={() => window.open(exp.links?.website, '_blank')}
+                  onClick={() => {
+                    // ถ้าเป็น Science Park ให้เลื่อนไปที่โปรเจกต์และเปิด modal
+                    if (exp.id === 'rsp-northeast2-collaboration') {
+                      handleViewScienceParkProject();
+                    } else if (exp.id === 'skai-med-software-engineer') {
+                      handleViewSkaiMedProject();
+                    } else {
+                      window.open(exp.links?.website, '_blank');
+                    }
+                  }}
                 >
                   {language === 'en' ? 'View Project' : 'ดูโปรเจกต์'}
                   <ExternalLink className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -410,7 +514,7 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20">
+      <section id="featured-projects" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-[var(--foreground)] mb-4">
@@ -425,6 +529,8 @@ export default function Home() {
 
           <TabSystem
             defaultTab="web-apps"
+            activeTab={activeTab}
+            onTabChange={setActiveTab}
             tabs={projectCategories.map((category) => ({
               id: category.id,
               label: category.label[language],
@@ -437,6 +543,7 @@ export default function Home() {
                   {category.projects.map((project) => (
                     <ProjectCard
                       key={project.id}
+                      projectId={project.id}
                       title={project.title[language]}
                       description={project.description[language]}
                       tech={project.tech}
