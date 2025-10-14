@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { useLanguage } from '../components/LanguageProvider';
@@ -8,25 +8,17 @@ import {
   Code, 
   Database, 
   Globe, 
-  Smartphone, 
   Zap, 
   Users, 
   Award, 
   Mail,
   Github,
-  Linkedin,
-  Twitter,
   Download,
   ArrowRight,
-  Star,
-  CheckCircle,
   Rocket,
-  Palette,
   Cpu,
-  Terminal,
   Layers,
   Cloud,
-  Settings,
   Building2,
   Calendar,
   MapPin,
@@ -39,6 +31,9 @@ import TabSystem from '../components/TabSystem';
 import ProjectModal from '../components/ProjectModal';
 import { projectCategories } from '../lib/projects';
 import { experiences } from '../lib/experience';
+import apiService from '../services/api';
+import CustomAlert from '../components/CustomAlert';
+import Lottie from 'lottie-react';
 
 interface UserData {
   id: string;
@@ -56,7 +51,26 @@ export default function Home() {
   const [selectedProject, setSelectedProject] = useState<any>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('web-apps');
+  const [alert, setAlert] = useState<{
+    isOpen: boolean;
+    type: 'success' | 'error' | 'info';
+    title: string;
+    message: string;
+  }>({
+    isOpen: false,
+    type: 'success',
+    title: '',
+    message: '',
+  });
+  const [analytics, setAnalytics] = useState<{
+    total_guests: number;
+    downloaded_cv_count: number;
+    download_percentage: number;
+  } | null>(null);
+  const [showConfetti, setShowConfetti] = useState(false);
+  const [confettiAnimation, setConfettiAnimation] = useState<any>(null);
   const router = useRouter();
+  const guestInitialized = useRef(false);
 
   useEffect(() => {
     // ตรวจสอบการ login
@@ -81,6 +95,83 @@ export default function Home() {
     // Simulate loading
     setTimeout(() => setIsLoaded(true), 2000);
   }, [router]);
+
+  // แยก useEffect สำหรับ Guest ID
+  useEffect(() => {
+    const initializeGuest = async () => {
+      // ป้องกันการเรียก API ซ้ำใน React Strict Mode
+      if (guestInitialized.current) {
+        return;
+      }
+
+      // เช็ค Guest Random ID ใน localStorage
+      const guestRandomId = localStorage.getItem('guest_random_id');
+      
+      if (!guestRandomId) {
+        try {
+          guestInitialized.current = true; // ตั้งค่า flag ก่อนเรียก API
+          
+          // เรียกใช้ API สร้าง Guest ใหม่
+          const guestResponse = await apiService.CreateGuest();
+          
+          // เซฟ Guest Random ID ลง localStorage
+          if (guestResponse.guest_random_id) {
+            localStorage.setItem('guest_random_id', guestResponse.guest_random_id);
+          }
+        } catch (error) {
+          console.error('❌ Failed to create guest:', error);
+          guestInitialized.current = false; // รีเซ็ต flag ถ้าเกิด error
+        }
+      } else {
+        guestInitialized.current = true; // ตั้งค่า flag ถ้ามี ID อยู่แล้ว
+      }
+    };
+
+    initializeGuest();
+  }, []);
+
+  // ดึงข้อมูล Analytics
+  useEffect(() => {
+    const fetchAnalytics = async () => {
+      try {
+        // เรียก API analytics โดยไม่ต้องใช้ token
+        const analyticsData = await apiService.GetAnalytics();
+        setAnalytics(analyticsData);
+      } catch (error) {
+        console.error('❌ Failed to load analytics:', error);
+        // แสดงข้อมูล mock เมื่อเกิด error
+        setAnalytics({
+          total_guests: 1247,
+          downloaded_cv_count: 89,
+          download_percentage: 7.1
+        });
+      }
+    };
+
+    fetchAnalytics();
+  }, []);
+
+  // ส่งข้อมูล analytics ไปยัง localStorage เพื่อให้ Navbar อ่านได้
+  useEffect(() => {
+    if (analytics) {
+      localStorage.setItem('website_analytics', JSON.stringify(analytics));
+    }
+  }, [analytics]);
+
+  // โหลด Confetti Animation
+  useEffect(() => {
+    const loadConfettiAnimation = async () => {
+      try {
+        const response = await fetch('/Confetti.json');
+        const animationData = await response.json();
+        setConfettiAnimation(animationData);
+      } catch (error) {
+        console.error('Failed to load confetti animation:', error);
+      }
+    };
+    
+    loadConfettiAnimation();
+  }, []);
 
   const handleLogout = () => {
     // ลบข้อมูลจาก localStorage
@@ -114,22 +205,18 @@ export default function Home() {
   };
 
   const handleViewScienceParkProject = () => {
-    console.log('🎯 handleViewScienceParkProject called');
     
     // เปลี่ยน tab ไปที่ Web Applications ก่อน
     setActiveTab('web-apps');
-    console.log('✅ Changed tab to web-apps');
     
     // เลื่อนไปที่ส่วน Featured Projects
     const projectsSection = document.getElementById('featured-projects');
     if (projectsSection) {
       projectsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      console.log('✅ Scrolled to featured-projects section');
     }
     
     // หน่วงเวลาให้ tab เปลี่ยนและเลื่อนเสร็จก่อน
     setTimeout(() => {
-      console.log('⏰ Timeout 1: Looking for RSP card...');
       
       // ลบ highlight class จากการ์ดอื่นๆ ก่อน
       document.querySelectorAll('.highlight-project-card').forEach(card => {
@@ -138,43 +225,33 @@ export default function Home() {
       
       // เพิ่มคลาส highlight ให้กับการ์ด RSP Northeast 2
       const rspCard = document.querySelector('[data-project-id="rsp-northeast2-system"]');
-      console.log('🔍 Found RSP card:', rspCard);
       
       if (rspCard) {
         rspCard.classList.add('highlight-project-card');
-        console.log('✨ Added highlight-project-card class');
         
         // เลื่อนไปที่การ์ดนั้นเพิ่มเติม
         setTimeout(() => {
           rspCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          console.log('✅ Scrolled to RSP card');
         }, 300);
       } else {
         console.error('❌ RSP card not found!');
-        // ลอง log all cards
-        const allCards = document.querySelectorAll('[data-project-id]');
-        console.log('📋 All project cards found:', Array.from(allCards).map(c => c.getAttribute('data-project-id')));
       }
     }, 1000);
   };
 
   const handleViewSkaiMedProject = () => {
-    console.log('🎯 handleViewSkaiMedProject called');
     
     // เปลี่ยน tab ไปที่ Web Applications ก่อน
     setActiveTab('web-apps');
-    console.log('✅ Changed tab to web-apps');
     
     // เลื่อนไปที่ส่วน Featured Projects
     const projectsSection = document.getElementById('featured-projects');
     if (projectsSection) {
       projectsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      console.log('✅ Scrolled to featured-projects section');
     }
     
     // หน่วงเวลาให้ tab เปลี่ยนและเลื่อนเสร็จก่อน
     setTimeout(() => {
-      console.log('⏰ Timeout 1: Looking for SKAI PHI card...');
       
       // ลบ highlight class จากการ์ดอื่นๆ ก่อน
       document.querySelectorAll('.highlight-project-card').forEach(card => {
@@ -183,24 +260,111 @@ export default function Home() {
       
       // เพิ่มคลาส highlight ให้กับการ์ด SKAI PHI
       const skaiCard = document.querySelector('[data-project-id="skai-phi-medical-system"]');
-      console.log('🔍 Found SKAI PHI card:', skaiCard);
       
       if (skaiCard) {
         skaiCard.classList.add('highlight-project-card');
-        console.log('✨ Added highlight-project-card class');
         
         // เลื่อนไปที่การ์ดนั้นเพิ่มเติม
         setTimeout(() => {
           skaiCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          console.log('✅ Scrolled to SKAI PHI card');
         }, 300);
       } else {
         console.error('❌ SKAI PHI card not found!');
-        // ลอง log all cards
-        const allCards = document.querySelectorAll('[data-project-id]');
-        console.log('📋 All project cards found:', Array.from(allCards).map(c => c.getAttribute('data-project-id')));
       }
     }, 1000);
+  };
+
+  const handleDownloadCV = async () => {
+    try {
+      // ดึง Guest Random ID จาก localStorage
+      const guestRandomId = localStorage.getItem('guest_random_id');
+      
+      if (!guestRandomId) {
+        console.error('❌ No guest ID found');
+        setAlert({
+          isOpen: true,
+          type: 'error',
+          title: language === 'en' ? 'Error' : 'เกิดข้อผิดพลาด',
+          message: language === 'en' 
+            ? 'Guest ID not found. Please refresh the page.' 
+            : 'ไม่พบ Guest ID กรุณาโหลดหน้าใหม่',
+        });
+        return;
+      }
+
+      
+      // เรียกใช้ API ดาวน์โหลด CV
+      const blob = await apiService.DownloadCV({ guest_random_id: guestRandomId });
+      
+      // สร้าง URL สำหรับดาวน์โหลด
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'CV_Chanchai_Lertsri.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
+      
+      
+      // แสดง Confetti Animation
+      setShowConfetti(true);
+      
+      // ซ่อน confetti หลังจาก 3 วินาที
+      setTimeout(() => {
+        setShowConfetti(false);
+      }, 3000);
+    } catch (error) {
+      console.error('❌ Failed to download CV:', error);
+      setAlert({
+        isOpen: true,
+        type: 'error',
+        title: language === 'en' ? 'Download Failed' : 'ดาวน์โหลดไม่สำเร็จ',
+        message: language === 'en' 
+          ? 'Failed to download CV. Please try again.' 
+          : 'ดาวน์โหลด CV ไม่สำเร็จ กรุณาลองใหม่',
+      });
+    }
+  };
+
+  const handleCopyEmail = async () => {
+    const email = 'chanchailertsri01@gmail.com';
+    
+    try {
+      // Copy email to clipboard
+      await navigator.clipboard.writeText(email);
+      
+      
+      // แสดง Custom Alert
+      setAlert({
+        isOpen: true,
+        type: 'success',
+        title: language === 'en' ? 'Copy Email Address Complete!' : 'คัดลอกที่อยู่อีเมลเสร็จสิ้น!',
+        message: language === 'en' 
+          ? `Email address copied successfully` 
+          : `คัดลอกที่อยู่อีเมลเรียบร้อยแล้ว`,
+      });
+    } catch (error) {
+      console.error('❌ Failed to copy email:', error);
+      
+      // Fallback for older browsers
+      const textArea = document.createElement('textarea');
+      textArea.value = email;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+      
+      // แสดง Custom Alert
+      setAlert({
+        isOpen: true,
+        type: 'success',
+        title: language === 'en' ? 'Copy Email Address Complete!' : 'คัดลอกที่อยู่อีเมลเสร็จสิ้น!',
+        message: language === 'en' 
+          ? `Email address copied successfully` 
+          : `คัดลอกที่อยู่อีเมลเรียบร้อยแล้ว`,
+      });
+    }
   };
 
   if (!user || !isLoaded) {
@@ -234,7 +398,7 @@ export default function Home() {
 
             {/* Greeting */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--foreground)] mb-6">
-              Hello, I'm{' '}
+              Hello, I&apos;m{' '}
               <span className="bg-gradient-to-r from-[var(--primary)] via-[var(--secondary)] to-[var(--accent)] bg-clip-text text-transparent">
                 Chanchai Lertsri
               </span>
@@ -301,6 +465,7 @@ export default function Home() {
                 {user.role} {language === 'en' ? 'Access' : 'การเข้าถึง'}
               </span>
             </div>
+
             
             {/* Login/Logout Button */}
             <div className="mt-6">
@@ -310,9 +475,14 @@ export default function Home() {
                   size="md"
                   onClick={() => {
                     // Temporarily disabled - login feature not available
-                    alert(language === 'en' 
-                      ? 'Login feature is temporarily disabled. Please contact the administrator.'
-                      : 'ฟีเจอร์เข้าสู่ระบบถูกปิดชั่วคราว กรุณาติดต่อผู้ดูแลระบบ');
+                    setAlert({
+                      isOpen: true,
+                      type: 'info',
+                      title: language === 'en' ? 'Feature Disabled' : 'ฟีเจอร์ถูกปิด',
+                      message: language === 'en' 
+                        ? 'Login feature is temporarily disabled. Please contact the administrator.'
+                        : 'ฟีเจอร์เข้าสู่ระบบถูกปิดชั่วคราว กรุณาติดต่อผู้ดูแลระบบ',
+                    });
                   }}
                   className="group opacity-50 cursor-not-allowed"
                   disabled
@@ -427,7 +597,7 @@ export default function Home() {
                   {exp.type === 'Collaboration' 
                     ? (language === 'en' ? 'Completed' : 'เสร็จสิ้น')
                     : (language === 'en' ? 'Ongoing' : 'กำลังดำเนินการ')}
-                </span>
+                    </span>
               </div>
 
               <div className="space-y-4 mb-6">
@@ -495,7 +665,7 @@ export default function Home() {
             </h3>
             <p className="text-[var(--muted-foreground)] max-w-3xl mx-auto leading-relaxed">
               {language === 'en'
-                ? "I'm always open to new collaborations and partnerships. Whether you're looking for web development, software engineering, or technical consulting services, I'd love to discuss how we can work together to bring your ideas to life."
+                ? "I&apos;m always open to new collaborations and partnerships. Whether you&apos;re looking for web development, software engineering, or technical consulting services, I&apos;d love to discuss how we can work together to bring your ideas to life."
                 : 'ฉันเปิดรับความร่วมมือและพันธมิตรใหม่ๆ เสมอ ไม่ว่าคุณกำลังมองหาการพัฒนาเว็บ, วิศวกรรมซอฟต์แวร์ หรือบริการให้คำปรึกษาด้านเทคนิค ฉันอยากจะหารือว่าเราจะทำงานร่วมกันเพื่อทำให้ไอเดียของคุณเป็นจริงได้อย่างไร'}
             </p>
             <div className="mt-6">
@@ -562,46 +732,62 @@ export default function Home() {
       <section id="contact" className="py-20 bg-[var(--card)]/50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-[var(--foreground)] mb-4">
-            {language === 'en' ? "Let's Work Together" : 'มาทำงานด้วยกัน'}
+            {language === 'en' ? "Let Work Together" : 'มาทำงานด้วยกัน'}
           </h2>
           <p className="text-lg text-[var(--muted-foreground)] mb-12 max-w-2xl mx-auto">
             {language === 'en'
-              ? "Have a project in mind? I'd love to hear about it. Send me a message and let's discuss how we can bring your ideas to life."
+              ? "Have a project in mind? I&apos;d love to hear about it. Send me a message and let&apos;s discuss how we can bring your ideas to life."
               : 'มีโปรเจกต์ในใจอยู่หรือไม่? ฉันอยากจะได้ยินเกี่ยวกับมัน ส่งข้อความถึงฉันแล้วมาคุยกันว่าเราจะทำให้ไอเดียของคุณเป็นจริงได้อย่างไร'}
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button
-              variant="gradient"
-              size="lg"
-              className="group"
-              onClick={() => window.open('mailto:chanchai@example.com', '_blank')}
-            >
-              <Mail className="mr-2 h-5 w-5" />
-              {language === 'en' ? 'Send Email' : 'ส่งอีเมล'}
-            </Button>
+          <div className="flex flex-col items-center gap-6 mb-12">
+            {/* ปุ่มทั้งสองในแถวเดียวกัน */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Button
+                variant="gradient"
+                size="lg"
+                className="group"
+                onClick={handleDownloadCV}
+              >
+                <Download className="mr-2 h-5 w-5" />
+                {language === 'en' ? 'Download CV' : 'ดาวน์โหลด CV'}
+              </Button>
+              
+              <Button
+                variant="outline"
+                size="lg"
+                className="group"
+                onClick={() => window.open('https://github.com/Chanchai2004', '_blank')}
+              >
+                <Github className="mr-2 h-5 w-5" />
+                {language === 'en' ? 'View GitHub' : 'ดู GitHub'}
+              </Button>
+            </div>
             
-            <Button
-              variant="outline"
-              size="lg"
-              className="group"
-              onClick={() => window.open('https://github.com', '_blank')}
-            >
-              <Github className="mr-2 h-5 w-5" />
-              {language === 'en' ? 'View GitHub' : 'ดู GitHub'}
-            </Button>
-              </div>
+            {/* CV Download Stats - แยกแถวใหม่ */}
+            {analytics && (
+              <p className="text-sm text-[var(--muted-foreground)]">
+                {analytics.downloaded_cv_count} {language === 'en' ? 'downloads' : 'ดาวน์โหลดแล้ว'}
+              </p>
+            )}
+          </div>
 
           {/* Social Links */}
           <div className="flex justify-center space-x-6">
             {[
-              { icon: Github, href: 'https://github.com', label: 'GitHub' },
-              { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-              { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
+              { icon: Github, href: 'https://github.com/Chanchai2004', label: 'GitHub' },
+              { icon: Mail, href: '#', label: 'Gmail', onClick: handleCopyEmail },
+              
             ].map((social, index) => (
               <button
                 key={index}
-                onClick={() => window.open(social.href, '_blank')}
+                onClick={() => {
+                  if (social.onClick) {
+                    social.onClick();
+                  } else {
+                    window.open(social.href, '_blank');
+                  }
+                }}
                 className="p-3 bg-[var(--card)] border border-[var(--border)] rounded-xl hover:bg-[var(--muted)] transition-all duration-300 hover:-translate-y-1 group"
                 aria-label={social.label}
               >
@@ -658,6 +844,29 @@ export default function Home() {
         onClose={handleCloseModal}
         project={selectedProject}
       />
+
+      {/* Confetti Animation for CV Download */}
+      {showConfetti && confettiAnimation && (
+        <div className="fixed inset-0 z-50 pointer-events-none">
+          <Lottie
+            animationData={confettiAnimation}
+            loop={false}
+            autoplay={true}
+            style={{ width: '100vw', height: '100vh' }}
+          />
+        </div>
+      )}
+
+      {/* Custom Alert */}
+      <CustomAlert
+        isOpen={alert.isOpen}
+        onClose={() => setAlert(prev => ({ ...prev, isOpen: false }))}
+        type={alert.type}
+        title={alert.title}
+        message={alert.message}
+        duration={4000}
+      />
     </div>
   );
 }
+

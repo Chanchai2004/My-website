@@ -1,12 +1,12 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Lottie from 'lottie-react';
 
 interface LottieLoaderProps {
   size?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl';
   className?: string;
-  animationData?: any;
+  animationData?: unknown;
   loop?: boolean;
   autoplay?: boolean;
 }
@@ -18,7 +18,7 @@ export function LottieLoader({
   loop = true,
   autoplay = true 
 }: LottieLoaderProps) {
-  const [animation, setAnimation] = useState<any>(null);
+  const [animation, setAnimation] = useState<unknown>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 

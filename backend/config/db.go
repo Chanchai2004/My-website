@@ -46,6 +46,7 @@ func SetupDatabase() {
 	err := db.AutoMigrate(
 		&entity.User{},
 		&entity.Role{},
+		&entity.Guest{},
 	)
 
 	if err != nil {

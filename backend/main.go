@@ -47,6 +47,16 @@ func main() {
 		// Validate OTP
 		public.POST("/validate-otp", controller.ValidateResetTokenController)
 
+		// Guest Management (Public access)
+		public.POST("/guests", controller.CreateGuest)
+
+		public.POST("/download-cv", controller.DownloadCV)
+		public.GET("/analytics", controller.ListAnalytic)
+
+		public.PUT("/guests/:id/like", controller.UpdateGuestLike)
+		public.PATCH("/guests", controller.UpdateGuest)
+
+		
 	}
 
 	// 🔒 Protected API (ต้องใช้ Token) - Guest and Admin
@@ -69,6 +79,11 @@ func main() {
 		admin.POST("/users", controller.CreateUser)
 		admin.PUT("/users/:id", controller.UpdateUser)
 		admin.DELETE("/users/:id", controller.DeleteUser)
+
+		// Guest Management (Admin only)
+		admin.GET("/guests", controller.GetAllGuests)
+		admin.DELETE("/guests/:id", controller.DeleteGuest)
+		
 	}
 
 	// 🌍 Root Route

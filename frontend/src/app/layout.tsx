@@ -5,6 +5,7 @@ import { ThemeProvider } from "../components/ThemeProvider";
 import { ThemeToggle } from "../components/ThemeToggle";
 import { LanguageProvider } from "../components/LanguageProvider";
 import { LanguageToggle } from "../components/LanguageToggle";
+import VisitorsCounter from "../components/VisitorsCounter";
 import "./globals.css";
 
 const lato = Lato({
@@ -36,6 +37,7 @@ export const metadata: Metadata = {
     apple: '/logo.png',
   },
 };
+
 
 export default function RootLayout({
   children,
@@ -74,6 +76,7 @@ export default function RootLayout({
                   
                   {/* Theme and Language Toggle */}
                   <div className="flex items-center gap-3">
+                    <VisitorsCounter />
                     <LanguageToggle />
                     <ThemeToggle />
                   </div>

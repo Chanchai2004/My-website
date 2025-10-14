@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { Mail, Eye, EyeOff, AlertCircle } from 'lucide-react';
-import { LoginLoader, FullScreenLoader } from '../components/LottieLoader';
+import { FullScreenLoader } from '../components/LottieLoader';
 import Button from '../components/Button';
 import apiService from '../services/api';
 import { IUser } from '../interfaces/IUSER';

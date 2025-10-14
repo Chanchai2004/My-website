@@ -33,6 +33,9 @@ COPY --from=builder /app/main .
 # Copy any additional files if needed
 COPY --from=builder /app/.env* ./
 
+# Copy files directory (including CV)
+COPY --from=builder /app/files ./files
+
 # Expose port
 EXPOSE 8000
 
