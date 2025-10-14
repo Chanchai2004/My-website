@@ -317,8 +317,7 @@ export default function Home() {
                   className="group opacity-50 cursor-not-allowed"
                   disabled
                 >
-                  {language === 'en' ? 'Get Access (Coming Soon)' : 'เข้าถึง (เร็วๆ นี้)'}
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  {language === 'en' ? 'Login' : 'เข้าสู่ระบบ'}
                 </Button>
               ) : (
                 <Button
