@@ -145,9 +145,9 @@ export const projectCategories: ProjectCategory[] = [
           en: 'A complete facility management system designed and developed for the Northeast Science Park 2 in Nakhon Ratchasima province. This web-based application provides comprehensive management capabilities including meeting room booking, maintenance request submissions, invoice printing for rented spaces, and online service area requests. The system elevates resource management efficiency, reduces operational complexity, minimizes errors from previous systems, and enhances systematic data inspection, tracking, and storage capabilities.',
           th: 'ระบบจัดการสิ่งอำนวยความสะดวกที่ซึ่งออกแบบและพัฒนาสำหรับอุทยานวิทยาศาสตร์ภาคตะวันออกเฉียงเหนือ 2 ในจังหวัดนครราชสีมา แอปพลิเคชันบนเว็บนี้ให้ความสามารถในการจัดการที่ครบวงจร รวมถึงการจองห้องประชุม, การส่งคำขอซ่อมบำรุง, การพิมพ์ใบแจ้งหนี้สำหรับพื้นที่เช่า และการร้องขอพื้นที่บริการออนไลน์ ระบบยกระดับประสิทธิภาพการจัดการทรัพยากร ลดความซับซ้อนในการดำเนินงาน ลดข้อผิดพลาดจากระบบก่อนหน้า และเพิ่มความสามารถในการตรวจสอบ ติดตาม และจัดเก็บข้อมูลอย่างเป็นระบบ'
         },
-        tech: ['React Native', 'TypeScript', 'JWT', 'Go', 'Material-UI', 'SMTP Email', 'CSV', 'PDF.js', 'OK Slip'],
+        tech: ['React.js', 'TypeScript', 'JWT', 'Go', 'Material-UI', 'SMTP Email', 'CSV', 'PDF.js', 'OK Slip'],
         status: 'Completed',
-        duration: '8 months',
+        duration: '3 months',
         team: {
           en: 'Capstone Project Group Project',
           th: 'โปรเจกต์กลุ่ม'
@@ -172,12 +172,12 @@ export const projectCategories: ProjectCategory[] = [
         },
         solutions: {
           en: [
-            'Built comprehensive system using React Native frontend with Material-UI components',
+            'Built comprehensive system using React.js frontend with Material-UI components',
             'Implemented Go backend with JWT authentication and GORM for database management',
             'Integrated SMTP email service, CSV processing, PDF.js for document generation, and Slip.js for receipts'
           ],
           th: [
-            'สร้างระบบที่ครอบคลุมโดยใช้ React Native Frontend พร้อมคอมโพเนนต์ Material-UI',
+            'สร้างระบบที่ครอบคลุมโดยใช้ React.js Frontend พร้อมคอมโพเนนต์ Material-UI',
             'ใช้งาน Go Backend ด้วยการยืนยันตัวตน JWT และ GORM สำหรับการจัดการฐานข้อมูล',
             'รวม SMTP Email Service, การประมวลผล CSV, PDF.js สำหรับการสร้างเอกสาร และ Slip.js สำหรับใบเสร็จ'
           ]
@@ -212,7 +212,7 @@ export const projectCategories: ProjectCategory[] = [
           en: 'A comprehensive hospital management system developed as part of a Software Engineering course group project. The system features role-based access control with different interfaces for doctors, nurses, and administrative staff. I was responsible for developing two core modules: the payment processing system and the human resource management system. The system ensures data security and privacy by implementing strict role separation where each user type can only access their designated interface and functionality.',
           th: 'ระบบจัดการโรงพยาบาลแบบครบวงจรที่พัฒนาขึ้นเป็นส่วนหนึ่งของโปรเจกต์กลุ่มวิชาวิศวกรรมซอฟต์แวร์ ระบบมีการควบคุมการเข้าถึงตามบทบาทพร้อมอินเทอร์เฟซที่แตกต่างกันสำหรับแพทย์, พยาบาล และเจ้าหน้าที่บริหาร ผมรับผิดชอบในการพัฒนาสองโมดูลหลัก: ระบบประมวลผลการชำระเงินและระบบจัดการทรัพยากรบุคคล ระบบรับประกันความปลอดภัยและความเป็นส่วนตัวของข้อมูลโดยการแยกบทบาทอย่างเข้มงวด โดยแต่ละประเภทผู้ใช้สามารถเข้าถึงได้เฉพาะอินเทอร์เฟซและฟังก์ชันที่กำหนดไว้เท่านั้น'
         },
-        tech: ['React Native', 'TypeScript', 'JWT', 'Go', 'Ant Design', 'SMTP Email', 'OK Slip'],
+        tech: ['React.js', 'TypeScript', 'JWT', 'Go', 'Ant Design', 'SMTP Email', 'OK Slip'],
         status: 'Completed',
         duration: '4 months',
         team: {
@@ -287,7 +287,7 @@ export const projectCategories: ProjectCategory[] = [
           en: 'A complete movie theater management system developed as part of a System Analysis course group project. The system features showtime scheduling, movie management, theater mapping, and seat booking capabilities. I was responsible for developing the showtime management module and the booking system integration. The main challenge involved complex mapping between movies, theaters, and time slots, requiring careful database design and user interface development to display this information in an intuitive table format.',
           th: 'ระบบจัดการโรงภาพยนตร์ซึ่งพัฒนาขึ้นเป็นส่วนหนึ่งของโปรเจกต์กลุ่มวิชาการวิเคราะห์ระบบ ระบบมีฟีเจอร์การจัดตารางรอบฉาย, การจัดการภาพยนตร์, การแมปโรงภาพยนตร์ และความสามารถในการจองที่นั่ง ผมรับผิดชอบในการพัฒนาส่วนจัดการรอบฉายและการรวมระบบจอง ความท้าทายหลักเกี่ยวข้องกับการจับคู่ที่ซับซ้อนระหว่างภาพยนตร์, โรงภาพยนตร์ และช่วงเวลา ซึ่งต้องการการออกแบบฐานข้อมูลอย่างรอบคอบและการพัฒนาอินเทอร์เฟซผู้ใช้เพื่อแสดงข้อมูลนี้ในรูปแบบตารางที่ใช้งานง่าย'
         },
-        tech: ['React Native', 'Ant Design', 'Go', 'SQLite', 'System Analysis'],
+        tech: ['React.js', 'Ant Design', 'Go', 'SQLite', 'System Analysis'],
         status: 'Completed',
         duration: '3 months',
         team: {
@@ -1065,10 +1065,10 @@ export const projectCategories: ProjectCategory[] = [
           th: 'การติดตั้งระบบจัดการสิ่งอำนวยความสะดวกระดับองค์กรด้วย Docker containerization, การโฮสต์คลาวด์ DigitalOcean และการกำหนดค่าโดเมนที่กำหนดเอง'
         },
         fullDescription: {
-          en: 'A professional deployment project for the RSP Northeast 2 Facility Management System. The deployment architecture includes containerization of React Native frontend and Go backend using Docker, orchestration with Docker Compose for service management, deployment on DigitalOcean Droplets for reliable cloud hosting, and domain configuration through GoDaddy with SSL/TLS security. The project demonstrates production-ready deployment practices including load balancing, database containerization, automated backups, monitoring setup, and scalability considerations for handling multiple concurrent users.',
-          th: 'โปรเจกต์การติดตั้งระดับมืออาชีพสำหรับระบบจัดการสิ่งอำนวยความสะดวก RSP Northeast 2 สถาปัตยกรรมการติดตั้งรวมถึงการทำ containerization ของ frontend React Native และ backend Go โดยใช้ Docker, การจัดการด้วย Docker Compose สำหรับการจัดการบริการ, การติดตั้งบน DigitalOcean Droplets สำหรับการโฮสต์คลาวด์ที่เชื่อถือได้ และการกำหนดค่าโดเมนผ่าน GoDaddy ด้วยความปลอดภัย SSL/TLS โปรเจกต์แสดงให้เห็นแนวทางการติดตั้งที่พร้อมสำหรับการใช้งานจริงรวมถึง load balancing, การทำ containerization ฐานข้อมูล, การสำรองข้อมูลอัตโนมัติ, การตั้งค่าการตรวจสอบ และการพิจารณาการปรับขนาดสำหรับการจัดการผู้ใช้พร้อมกันหลายคน'
+          en: 'A professional deployment project for the RSP Northeast 2 Facility Management System. The deployment architecture includes containerization of React.js frontend and Go backend using Docker, orchestration with Docker Compose for service management, deployment on DigitalOcean Droplets for reliable cloud hosting, and domain configuration through GoDaddy with SSL/TLS security. The project demonstrates production-ready deployment practices including load balancing, database containerization, automated backups, monitoring setup, and scalability considerations for handling multiple concurrent users.',
+          th: 'โปรเจกต์การติดตั้งระดับมืออาชีพสำหรับระบบจัดการสิ่งอำนวยความสะดวก RSP Northeast 2 สถาปัตยกรรมการติดตั้งรวมถึงการทำ containerization ของ frontend React.js และ backend Go โดยใช้ Docker, การจัดการด้วย Docker Compose สำหรับการจัดการบริการ, การติดตั้งบน DigitalOcean Droplets สำหรับการโฮสต์คลาวด์ที่เชื่อถือได้ และการกำหนดค่าโดเมนผ่าน GoDaddy ด้วยความปลอดภัย SSL/TLS โปรเจกต์แสดงให้เห็นแนวทางการติดตั้งที่พร้อมสำหรับการใช้งานจริงรวมถึง load balancing, การทำ containerization ฐานข้อมูล, การสำรองข้อมูลอัตโนมัติ, การตั้งค่าการตรวจสอบ และการพิจารณาการปรับขนาดสำหรับการจัดการผู้ใช้พร้อมกันหลายคน'
         },
-        tech: ['Docker', 'Docker Compose', 'DigitalOcean', 'GoDaddy', 'Nginx', 'SSL/TLS', 'React Native', 'Go'],
+        tech: ['Docker', 'Docker Compose', 'DigitalOcean', 'GoDaddy', 'Nginx', 'SSL/TLS', 'React.js', 'Go'],
         status: 'Completed',
         duration: '3 weeks',
         team: {
@@ -1083,11 +1083,11 @@ export const projectCategories: ProjectCategory[] = [
         ],
         challenges: {
           en: [
-            'Deploying React Native web application in containerized environment',
+            'Deploying React.js web application in containerized environment',
             'Managing database containerization with data persistence'
           ],
           th: [
-            'การติดตั้งแอปพลิเคชันเว็บ React Native ในสภาพแวดล้อม containerized',
+            'การติดตั้งแอปพลิเคชันเว็บ React.js ในสภาพแวดล้อม containerized',
             'การจัดการ containerization ฐานข้อมูลด้วยการรักษาข้อมูล'
           ]
         },
@@ -1132,10 +1132,10 @@ export const projectCategories: ProjectCategory[] = [
           th: 'การติดตั้งบนคลาวด์ของระบบจัดการโรงพยาบาลด้วย microservices ที่ทำ containerization, การโฮสต์ที่ปลอดภัย และการจัดการโดเมนสำหรับการใช้งานจริง'
         },
         fullDescription: {
-          en: 'A comprehensive deployment solution for a hospital management system developed as part of a Software Engineering course. The deployment includes containerizing the React Native frontend and Go backend with separate containers for payment and HR modules, orchestrating multiple services using Docker Compose, deploying on DigitalOcean cloud infrastructure for high availability, and configuring custom domain through GoDaddy with enterprise-grade security. The project showcases deployment of a complex multi-module system with role-based access control, secure API endpoints, and integration with external services like SMTP email and payment gateways.',
-          th: 'โซลูชันการติดตั้งที่ครอบคลุมสำหรับระบบจัดการโรงพยาบาลที่พัฒนาเป็นส่วนหนึ่งของหลักสูตร Software Engineering การติดตั้งรวมถึงการทำ containerization ของ frontend React Native และ backend Go พร้อมคอนเทนเนอร์แยกสำหรับโมดูลการชำระเงินและ HR, การจัดการบริการหลายตัวโดยใช้ Docker Compose, การติดตั้งบนโครงสร้างพื้นฐานคลาวด์ DigitalOcean สำหรับความพร้อมใช้งานสูง และการกำหนดค่าโดเมนที่กำหนดเองผ่าน GoDaddy ด้วยความปลอดภัยระดับองค์กร โปรเจกต์แสดงการติดตั้งระบบหลายโมดูลที่ซับซ้อนพร้อมการควบคุมการเข้าถึงตามบทบาท, จุดสิ้นสุด API ที่ปลอดภัย และการรวมกับบริการภายนอกเช่น SMTP email และ payment gateways'
+          en: 'A comprehensive deployment solution for a hospital management system developed as part of a Software Engineering course. The deployment includes containerizing the React.js frontend and Go backend with separate containers for payment and HR modules, orchestrating multiple services using Docker Compose, deploying on DigitalOcean cloud infrastructure for high availability, and configuring custom domain through GoDaddy with enterprise-grade security. The project showcases deployment of a complex multi-module system with role-based access control, secure API endpoints, and integration with external services like SMTP email and payment gateways.',
+          th: 'โซลูชันการติดตั้งที่ครอบคลุมสำหรับระบบจัดการโรงพยาบาลที่พัฒนาเป็นส่วนหนึ่งของหลักสูตร Software Engineering การติดตั้งรวมถึงการทำ containerization ของ frontend React.js และ backend Go พร้อมคอนเทนเนอร์แยกสำหรับโมดูลการชำระเงินและ HR, การจัดการบริการหลายตัวโดยใช้ Docker Compose, การติดตั้งบนโครงสร้างพื้นฐานคลาวด์ DigitalOcean สำหรับความพร้อมใช้งานสูง และการกำหนดค่าโดเมนที่กำหนดเองผ่าน GoDaddy ด้วยความปลอดภัยระดับองค์กร โปรเจกต์แสดงการติดตั้งระบบหลายโมดูลที่ซับซ้อนพร้อมการควบคุมการเข้าถึงตามบทบาท, จุดสิ้นสุด API ที่ปลอดภัย และการรวมกับบริการภายนอกเช่น SMTP email และ payment gateways'
         },
-        tech: ['Docker', 'Docker Compose', 'DigitalOcean', 'GoDaddy', 'Nginx', 'SSL/TLS', 'React Native', 'Go', 'SQLite'],
+        tech: ['Docker', 'Docker Compose', 'DigitalOcean', 'GoDaddy', 'Nginx', 'SSL/TLS', 'React.js', 'Go', 'SQLite'],
         status: 'Completed',
         duration: '2 weeks',
         team: {

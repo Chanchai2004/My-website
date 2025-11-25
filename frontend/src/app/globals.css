@@ -436,3 +436,41 @@ input, textarea, select {
   background: var(--primary);
   color: var(--primary-foreground);
 }
+
+/* Walking Robot Animation */
+@keyframes walkLeftToRight {
+  0% {
+    left: -120px;
+    transform: scaleX(1);
+  }
+  48% {
+    transform: scaleX(1);
+  }
+  50% {
+    left: calc(100% - 0px);
+    transform: scaleX(1);
+  }
+  52% {
+    transform: scaleX(-1);
+  }
+  98% {
+    transform: scaleX(-1);
+  }
+  100% {
+    left: -120px;
+    transform: scaleX(-1);
+  }
+}
+
+.walking-robot {
+  position: absolute;
+  bottom: 0;
+  animation: walkLeftToRight 20s linear infinite;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+  transition: transform 0.3s ease;
+  z-index: 9999;
+}
+
+.walking-robot:hover {
+  filter: drop-shadow(0 8px 16px rgba(59, 130, 246, 0.3));
+}

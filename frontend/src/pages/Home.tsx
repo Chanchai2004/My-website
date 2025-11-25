@@ -69,6 +69,7 @@ export default function Home() {
   } | null>(null);
   const [showConfetti, setShowConfetti] = useState(false);
   const [confettiAnimation, setConfettiAnimation] = useState<any>(null);
+  const [robotAnimation, setRobotAnimation] = useState<any>(null);
   const router = useRouter();
   const guestInitialized = useRef(false);
 
@@ -171,6 +172,21 @@ export default function Home() {
     };
     
     loadConfettiAnimation();
+  }, []);
+
+  // โหลด Robot Animation
+  useEffect(() => {
+    const loadRobotAnimation = async () => {
+      try {
+        const response = await fetch('/Robot-Bot-3D.json');
+        const animationData = await response.json();
+        setRobotAnimation(animationData);
+      } catch (error) {
+        console.error('Failed to load robot animation:', error);
+      }
+    };
+    
+    loadRobotAnimation();
   }, []);
 
   const handleLogout = () => {
@@ -400,7 +416,7 @@ export default function Home() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--foreground)] mb-6">
               Hello, I&apos;m{' '}
               <span className="bg-gradient-to-r from-[var(--primary)] via-[var(--secondary)] to-[var(--accent)] bg-clip-text text-transparent">
-                Chanchai Lertsri
+                GOT
               </span>
             </h1>
             
@@ -467,40 +483,7 @@ export default function Home() {
             </div>
 
             
-            {/* Login/Logout Button */}
-            <div className="mt-6">
-              {user.role === 'Guest' ? (
-                <Button
-                  variant="outline"
-                  size="md"
-                  onClick={() => {
-                    // Temporarily disabled - login feature not available
-                    setAlert({
-                      isOpen: true,
-                      type: 'info',
-                      title: language === 'en' ? 'Feature Disabled' : 'ฟีเจอร์ถูกปิด',
-                      message: language === 'en' 
-                        ? 'Login feature is temporarily disabled. Please contact the administrator.'
-                        : 'ฟีเจอร์เข้าสู่ระบบถูกปิดชั่วคราว กรุณาติดต่อผู้ดูแลระบบ',
-                    });
-                  }}
-                  className="group opacity-50 cursor-not-allowed"
-                  disabled
-                >
-                  {language === 'en' ? 'Login' : 'เข้าสู่ระบบ'}
-                </Button>
-              ) : (
-                <Button
-                  variant="outline"
-                  size="md"
-              onClick={handleLogout}
-                  className="group text-[var(--error)] hover:bg-[var(--error)]/10"
-            >
-              {language === 'en' ? 'Logout' : 'ออกจากระบบ'}
-                  <ArrowRight className="ml-2 h-4 w-4 rotate-180 transition-transform group-hover:translate-x-1" />
-                </Button>
-              )}
-            </div>
+            
           </div>
         </div>
       </section>
@@ -799,10 +782,28 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 border-t border-[var(--border)]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <footer className="py-12 border-t border-[var(--border)] relative overflow-hidden">
+        {/* Walking Robot Animation */}
+        {robotAnimation && (
+          <div className="absolute bottom-0 left-0 right-0 h-32 pointer-events-none" style={{ zIndex: 9999 }}>
+            <div className="walking-robot">
+              <Lottie
+                animationData={robotAnimation}
+                loop={true}
+                autoplay={true}
+                style={{ width: '120px', height: '120px' }}
+              />
+            </div>
+          </div>
+        )}
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center mb-4 md:mb-0">
+            {/* Left - Spacer */}
+            <div className="flex-1"></div>
+            
+            {/* Center - Logo & Title */}
+            <div className="flex items-center justify-center flex-1">
               <Image
                 src="/robot.png"
                 alt="Logo"
@@ -810,12 +811,18 @@ export default function Home() {
                 height={32}
                 className="rounded-full mr-3"
               />
-              <span className="text-[var(--foreground)] font-semibold">
-                Chanchai Lertsri
-              </span>
-                </div>
+              <div className="flex flex-col text-center">
+                <span className="text-[var(--foreground)] font-semibold">
+                  Chanchai Lertsri
+                </span>
+                <span className="text-xs text-[var(--muted-foreground)]">
+                  {language === 'en' ? 'Full-Stack Developer' : 'นักพัฒนา Full-Stack'}
+                </span>
+              </div>
+            </div>
             
-            <div className="flex items-center space-x-6">
+            {/* Right - Logout */}
+            <div className="flex items-center justify-end flex-1">
               {user.role !== 'Guest' && (
                 <button
                   onClick={handleLogout}
@@ -828,11 +835,11 @@ export default function Home() {
             </div>
           </div>
           
-            <div className="mt-8 pt-8 border-t border-[var(--border)] text-center">
+          <div className="mt-8 pt-8 border-t border-[var(--border)] text-center">
             <p className="text-[var(--muted-foreground)] text-sm">
               {language === 'en'
-                ? '© 2024 Chanchai Lertsri. Built with Next.js and lots of ☕'
-                : '© 2024 Chanchai Lertsri. สร้างด้วย Next.js และกาแฟมากมาย ☕'}
+                ? '© 2025 Portfolio Website Version 1.2 Built with Next.js and Golang'
+                : '© 2025 เว็บไซต์ portfolio Version 1.2 สร้างด้วย Next.js และ Golang'}
             </p>
           </div>
         </div>
